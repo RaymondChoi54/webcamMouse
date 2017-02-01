@@ -17,9 +17,13 @@
 
 Describe the different roles on the team and the responsibilities associated with each role.
 -*Front-end Developer (extension)*: Develop the UI that the user will see on the page
+
 -*Back-end Developer (extension)*: Develop the backend that handles manipulation of page, etc.
+
 -*Front-end Developer (face tracking)*: Develop the UI of the face tracking software
+
 -*Back-end Developer (face tracking)*: Develop the computer vision algorithms, mouse movement, etc.
+
 -*Testing and Verification:* Conduct unit / black box testing to make sure it works
 
 #### Events
@@ -41,11 +45,16 @@ Describe meetings (and other events) you are planning to have:
 #### Artifacts
 
 -To-do list in a kanban/scrum fashion. Hosted on Trello.
---Priority are determined in our planning meetings and labelled using labels in our Trello
---Since each member knows their role, they are assigned to each card on Trello that matches their role
---Scheduling is determined in our planning meetings and assigned on the card in Trello so that it is easy to view due dates. 
+
+-Priority are determined in our planning meetings and labelled using labels in our Trello
+
+-Since each member knows their role, they are assigned to each card on Trello that matches their role
+
+-Scheduling is determined in our planning meetings and assigned on the card in Trello so that it is easy to view due dates. 
 ![alt tag](trello.jpg)
+
 -Code to be managed on Github
+
 -Communication is handled via Slack
 
 List/describe the artifacts you will produce in order to organize your team.       
@@ -76,14 +85,23 @@ Images to support statements
 
 Text for detailed explanation 
 Supporting research
+
 http://www.cerebralpalsy.org/about-cerebral-palsy/definition
+
 https://mssociety.ca/about-ms/what-is-ms
+
 https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Amyotrophic-Lateral-Sclerosis-ALS-Fact-Sheet
+
 https://www.slashgear.com/griffin-unveils-mouthstick-stylus-for-the-disabled-01272015/
+
 http://www.orin.com/access/sip_puff/
+
 https://www.brainasoft.com/braina/
+
 https://www.researchgate.net/publication/237091257_Assisting_people_with_disabilities_through_Kinect_sensors_into_a_smart_house?enrichId=rgreq-41e322896526ad3126ec0b0bfbb4aa4f-XXX&enrichSource=Y292ZXJQYWdlOzIzNzA5MTI1NztBUzoxMDI1OTkzNDQ3ODc0NTZAMTQwMTQ3Mjk5ODE5Mw%3D%3D&el=1_x_2&_esc=publicationCoverPdf 
+
 http://gettecla.com/blogs/news/13884757-4-ways-quadriplegics-can-use-an-ipad-or-iphone
+
 http://www.brainandspinalcord.org/quadriplegia/
 
 List/describe the artifacts you will produce in order to present your project idea.
