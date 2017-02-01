@@ -58,9 +58,13 @@ Bi Weekly Planning Meeting: This meeting will be held after In-person meeting. N
 #### Goals and tasks
 
 -Get OpenCV to track facial features
+
 -Create an Chrome extension
--Setup Trello and assign the To-Do list
+
+-Complete Cursor Control
+
 -Familiarize with the working environment 
+
 -Learn about Chrome extension development 
 
 
