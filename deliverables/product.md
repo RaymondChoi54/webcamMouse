@@ -9,41 +9,15 @@ The software allows the user to control the computer cursor using the webcam. Th
 
 ![alt tag](scr.jpg)
 
- * Short (1 - 2 min' read)
- * Start with a single sentence, high-level description of the product.
- * Be clear - Describe the problem you are solving in simple terms.
- * Be concrete. For example:
-    * What are you planning to build? Is it a website, mobile app,
-   browser extension, command-line app, etc.?      
-    * When describing the problem/need, give concrete examples of common use cases.
- * Focus on *what* your product does, and avoid discussing *how* you're going to implement it.      
-   For example: This is not the time or the place to talk about which programming language and/or framework you are planning to use.
- * **Feel free (and very much encouraged) to include useful diagrams, mock-ups and/or links**.
-
 
 #### Q2: Who are your target users?
 
 Our target users are mainly quadriplegics. Quadriplegics are individuals who have all four of their limbs paralyzed. Hence, they as they do not have a way to control traditional input devices for computers. Individuals with brain damage that affects their motor control such cerebral palsy, amyotrophic lateral sclerosis, or similar conditions can also use [Insert name here]. As control of the computer may be very inaccurate when using their limbs. [Insert name here] can also be used by those who have an amputated arm to enhance their quality of life. Instead of having to switch back and forth between the mouse and keyboard, such an individual can keep their hand on the keyboard.
 
 
- * Short (1 - 2 min' read max)
- * Be specific (e.g. )
- * Feel free (but not obligated) to use personas.        
-   You can create your personas as part of this Markdown file, or add a link to an external site (for example, [Xtensio](https://xtensio.com/user-persona/)).
-
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
 
 [Insert name here] distances itself from all commercially available software and hardware designed for individuals who suffer from the loss of their limbs. Unlike voice control which in often unreliable in noisy environments and for those with speech impairment, [Insert name here] can be used in any location. [Insert name here] is also free to use, no special hardware is required unlike a mouth stylus. A mouth stylus may provide very accurate input, but there is a cost associated with it and holding a object in the mouth for an extended period of time induces discomfort. [Insert name here] also provides a very intuitive way to control the cursor, looking at where you want to click is very natural. On the other hand, Sip-and-puff is very unnatural and is just awkward at best, inhaling and exhaling into a tube is very tiring and not to mention the hygiene issues.
-
-YOUR ANSWER GOES HERE ...
-
- * Short (1 - 2 min' read max)
- * We want you to "connect the dots" for us - Why does your product (as described in your answer to Q1) fits the needs of your users (as described in your answer to Q2)?
- * Explain the benefits of your product explicitly & clearly. For example:
-    * Save users time (how much?)
-    * Allow users to discover new information (which information? And, why couldn't they discover it before?)
-    * Provide users with more accurate and/or informative data (what kind of data? Why is it useful to them?)
-
 
 ----
 
@@ -65,12 +39,5 @@ Clicking on an object is difficult since users would not have precise control of
 
 Specify 3 - 5 key decisions and/or insights that came up during your meetings
 and/or collaborative process.
-
- * Short (5 min' read max)
- * Decisions can be related to the product and/or the team process.
-    * Mention which alternatives you were considering.
-    * Present the arguments for each alternative.
-    * Explain why the option you decided on makes the most sense for your team/product/users.
- * Essentially, we want to understand how (and why) you ended up with your current product plan.
 
 
