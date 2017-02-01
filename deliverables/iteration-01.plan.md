@@ -16,11 +16,11 @@
 #### Roles & responsibilities
 
 Describe the different roles on the team and the responsibilities associated with each role.
-*Front-end Developer (extension)*: Develop the UI that the user will see on the page
-*Back-end Developer (extension)*: Develop the backend that handles manipulation of page, etc.
-*Front-end Developer (face tracking)*: Develop the UI of the face tracking software
-*Back-end Developer (face tracking)*: Develop the computer vision algorithms, mouse movement, etc.
-*Testing and Verification:* Conduct unit / black box testing to make sure it works
+-*Front-end Developer (extension)*: Develop the UI that the user will see on the page
+-*Back-end Developer (extension)*: Develop the backend that handles manipulation of page, etc.
+-*Front-end Developer (face tracking)*: Develop the UI of the face tracking software
+-*Back-end Developer (face tracking)*: Develop the computer vision algorithms, mouse movement, etc.
+-*Testing and Verification:* Conduct unit / black box testing to make sure it works
 
 #### Events
 
