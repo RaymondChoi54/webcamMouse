@@ -56,6 +56,7 @@ In our first group meeting, our key decisions were to decide the problem we want
 In our second group meeting we discussed the details of our software. The two key decisions are:
 
 How to control the cursor
+
 How to click on an object
 
 We decided that the nose is most likely the easiest facial feature to track. We had two ideas on how to control the cursor. The first was to move the cursor the direction the nose is facing and the second was to track the location of the nose and move the cursor to a relative location on the screen. We decided that the first implementation is more user friendly.
