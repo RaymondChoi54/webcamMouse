@@ -8,15 +8,14 @@ noseCascade = cv2.CascadeClassifier(sys.argv[3])
 
 video_capture = cv2.VideoCapture(0)
 
+nx, ny = 0, 0;
+
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
 
     # Flip frame
     frame = cv2.flip(frame,1)
-
-    nx, ny = 0, 0;
-
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     faces = faceCascade.detectMultiScale(
