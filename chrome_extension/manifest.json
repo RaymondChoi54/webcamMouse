@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "CSC 301 Extension",
+  "description": "This extension will help CSC 301 Project",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
