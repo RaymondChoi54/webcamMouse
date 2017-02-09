@@ -7,8 +7,8 @@
 
 ## Iteration XX - Review & Retrospect
 
- * When: FILL IN THE DATE WHEN YOU ACTUALLY HAD YOUR REVIEW MEETING
- * Where: PHYSICAL LOCATION AND/OR ONLINE
+ * When: Thursday, February 9th 2017
+ * Where: Bahen Centre
 
 ## Process - Reflection
 
@@ -17,7 +17,6 @@
 #### Decisions that turned out well
 
 List process-related (i.e. team organization) decisions that, in retrospect, turned out to be successful.
-
 
  * 2 - 4 decisions.
  * Ordered from most to least important.
