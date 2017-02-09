@@ -2,17 +2,34 @@ import pyautogui
 
 class MouseControl:
 
-	class __init__(self, screen_x, screen_y, center_x, center_y):
+	class __init__(self, screen_x, screen_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity):
 		self.screen_x = screen_x
 		self.screen_y = screen_y
 		self.center_x = center_x
 		self.center_y = center_y
+		self.circ_raid = circ_raid
+		self.x_sensitivity = x_sensitivity
+		self.y_sensitivity = y_sensitivity
 		
 	def smart_mouse_move(self, x, y):
-		pyautogui.moveTo(x, y, duration=0)
+		current_x, current_y = pyautogui.position()
+		if(x > self.center_x + circ_raid):
+			pyautogui.moveTo(current_x + x_sensitivity, current_y, duration=0)
+		elif(x < self.center_x - circ_raid):
+			pyautogui.moveTo(current_x - x_sensitivity, current_y, duration=0)
+			
+		current_x, current_y = pyautogui.position()
+		if(y > self.center_y + circ_raid):
+			pyautogui.moveTo(current_x, current_y + y_sensitivity, duration=0)
+		elif(y < self.center_y - circ_raid):
+			pyautogui.moveTo(current_x, current_y - y_sensitivity, duration=0)
 
 	def move_mouse(x, y):
 		pyautogui.moveTo(x, y, duration=0)
+		
+	def recalibrate(self, x, y):
+		self.center_x = x
+		self.center_y = y
 
 	def auto_res(self):
 		self.screen_x = pyautogui.size()[0]
