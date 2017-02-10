@@ -1,9 +1,5 @@
 # YOUR PRODUCT/TEAM NAME
 
- > _Note:_ This document is meant to be written during (or shortly after) your review meeting, which should happen fairly close to the due date.      
- >      
- > _Suggestion:_ Have your review meeting a day or two before the due date. This way you will have some time to go over (and edit) this document, and all team members should have a chance to make their contribution.
-
 ## Iteration 01 - Review & Retrospect
 
  * When: Thursday, February 9th 2017
@@ -22,9 +18,9 @@ List process-related (i.e. team organization) decisions that, in retrospect, tur
  * Explain why (i.e. give a supporting argument) you consider a decision to be successful.
  * Feel free to refer/link to process artifact(s).
  
--Using python for the cursor control because 1) compatible with OpenCV 2) compatible with group member skillsets
--Never made extension but it is a project which we feel is appropriate given our skillset
--Using Trello and Slack for project management
+-Using python for the cursor control because 1) compatible with OpenCV 2) compatible with group member skillsets <br>
+-Never made extension but it is a project which we feel is appropriate given our skillset <br>
+-Using Trello and Slack for project management <br>
 
 
 #### Decisions that did not turn out as well as we hoped
