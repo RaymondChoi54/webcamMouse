@@ -36,7 +36,7 @@ The software allows the user to control the computer cursor using the webcam. Th
  
 All of the tasks described in the plan have been completed if not surpassed. Attached in this folder is a screenshot of the Trello in the state of iteration 1 completion along with a JSON export of the Trello board. 
 
-![alt tag](trello_it1.jpg)
+![alt tag](trello_it1.JPG)
 
 #### Goals and/or tasks that were planned but not met/completed:
 
