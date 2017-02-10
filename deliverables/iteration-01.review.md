@@ -31,9 +31,9 @@ List process-related (i.e. team organization) decisions that, in retrospect, wer
  * Ordered from most to least important.
  * Feel free to refer/link to process artifact(s).
 
--Project is too simple in scope for 6 people; the amount of work we put in for iteration 1 was not enough
--Originally used nose tracking, then had to switch to eyes due to inaccuracies; then had to switch yet again to face tracking due to further inaccuracies
--Trying to embed OpenCV in a Chrome extension: hard to control the mouse with a Chrome extension - just making script downloadable
+-Project is too simple in scope for 6 people; the amount of work we put in for iteration 1 was not enough <br>
+-Originally used nose tracking, then had to switch to eyes due to inaccuracies; then had to switch yet again to face tracking due to further inaccuracies <br>
+-Trying to embed OpenCV in a Chrome extension: hard to control the mouse with a Chrome extension - just making script downloadable <br>
 
 
 #### Planned changes
@@ -43,8 +43,8 @@ List any process-related changes you are planning to make (if there are any)
  * Ordered from most to least important.
  * Explain why you are making a change.
 
--Adding a website where users can view a demo and download the project
--Need to figure out method to click; each choice has a tradeoff/dilemma
+-Adding a website where users can view a demo and download the project <br>
+-Need to figure out method to click; each choice has a tradeoff/dilemma <br>
 
 ## Product - Review
 
@@ -71,9 +71,9 @@ Going into the next iteration, our main insights are:
  * Can be related to product and/or process.
 
 
-New website
-Extension needs work
-Need to come up with method for clicking
-Glad everyone is on the same page - system is working
-< trello board here>
+New website <br>
+Extension needs work <br>
+Need to come up with method for clicking <br>
+Glad everyone is on the same page - system is working <br>
+< trello board here> <br>
 
