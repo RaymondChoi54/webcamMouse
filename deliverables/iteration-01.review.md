@@ -40,7 +40,7 @@ All of the tasks described in the plan have been completed if not surpassed. Att
 
 #### Goals and/or tasks that were planned but not met/completed:
 
-None - we all met our tasks. However, at the last minute we decided to add the website. Due to the decision being taken before the due date, the group member in charge of that (Rohan) did not commit any code for that part.<br><br>
+None - we all met our tasks. However, at the last minute we decided to add the website. Due to the decision being taken just before the due date, the group member in charge of that (Rohan) did not commit any code for that part.<br><br>
 
 
 ## Meeting Highlights
@@ -49,5 +49,3 @@ As stated earlier, our project scope is too limited. We are thus going to build 
 Extension needs work. It is currently in a very basic state and is missing a lot of our core requirements for the application. <br><br>
 Need to come up with method for clicking. Timothy will look into ways to track clicks using facial features. Current idea is to use left/right double-blink to similate a cick.<br><br>
 Everyone is on the same page, and we are working together very well. Our task management (via Trello) is running smoothly, and we have all made good progress on the work we were individually assigned (all targets were met for this iteration) <br><br>
-<trello board here> <br><br>
-
