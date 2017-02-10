@@ -18,9 +18,9 @@ List process-related (i.e. team organization) decisions that, in retrospect, tur
  * Explain why (i.e. give a supporting argument) you consider a decision to be successful.
  * Feel free to refer/link to process artifact(s).
  
--Using python for the cursor control because 1) compatible with OpenCV 2) compatible with group member skillsets<br><br>
--Never made extension but it is a project which we feel is appropriate given our skillset<br><br>
--Using Trello and Slack for project management. Our project management is going well.<br><br>
+Using python for the cursor control because 1) compatible with OpenCV 2) compatible with group member skillsets<br><br>
+Never made extension but it is a project which we feel is appropriate given our skillset<br><br>
+Using Trello and Slack for project management. Our project management is going well.<br><br>
 
 
 #### Decisions that did not turn out as well as we hoped
@@ -31,9 +31,9 @@ List process-related (i.e. team organization) decisions that, in retrospect, wer
  * Ordered from most to least important.
  * Feel free to refer/link to process artifact(s).
 
--Project is too simple in scope for 6 people; the amount of work we put in for iteration 1 was not enough <br><br>
--Originally used nose tracking, then had to switch to eyes due to inaccuracies; then had to switch yet again to face tracking due to further inaccuracies <br><br>
--Trying to embed OpenCV in a Chrome extension: hard to control the mouse with a Chrome extension - just making script downloadable <br><br>
+Project is too simple in scope for 6 people; the amount of work we put in for iteration 1 was not enough <br><br>
+Originally used nose tracking, then had to switch to eyes due to inaccuracies; then had to switch yet again to face tracking due to further inaccuracies <br><br>
+Trying to embed OpenCV in a Chrome extension: hard to control the mouse with a Chrome extension - just making script downloadable <br><br>
 
 
 #### Planned changes
