@@ -34,10 +34,10 @@ Need to figure out method to click; each choice has a tradeoff/dilemma <br><br>
 #### Goals and/or tasks that were met/completed:
 
 
-Got OpenCV to track facial features (in /webcam_mouse). 
-On track for cursor control (in /webcam_mouse). 
-Created a very basic chrome extension, getting familiar with chrome extensions (in /chrome_extension).
-Started on a website where users can view a demo and download the project (in /website). This was not in the original iteration plan.
+Got OpenCV to track facial features (in /webcam_mouse).  <br><br>
+On track for cursor control (in /webcam_mouse).  <br><br>
+Created a very basic chrome extension, getting familiar with chrome extensions (in /chrome_extension). <br><br>
+Started on a website where users can view a demo and download the project (in /website). This was not in the original iteration plan. <br><br>
 
 
 #### Goals and/or tasks that were planned but not met/completed:
