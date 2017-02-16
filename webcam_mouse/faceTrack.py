@@ -3,7 +3,8 @@ import sys
 import cv2
 from MouseController import MouseControl
 
-lol = MouseControl(0, 0, 0, 0,0,0,0)
+# Create mousecontrol ocject for controlling use
+mouseControl = MouseControl(0, 0, 0, 0,0,0,0)
 
 faceCascade = cv2.CascadeClassifier(sys.argv[1])
 eyesCascade = cv2.CascadeClassifier(sys.argv[2])
@@ -74,6 +75,8 @@ while True:
 
 		cv2.putText(frame,"Track Coordinates: (" + str(nx) + "," + str(ny) + ")", (10,50), cv2.FONT_HERSHEY_PLAIN, 2, (255,0,0))
 		cv2.putText(frame,"press Q to quit", (0,20), cv2.FONT_HERSHEY_PLAIN, 1, (255,0,0))
+
+		mouseControl.
 
 	# Display the resulting frame
 	cv2.imshow('Face Tracking', frame)
