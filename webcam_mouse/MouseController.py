@@ -2,7 +2,7 @@ import pyautogui
 
 class MouseControl:
 
-	class __init__(self, screen_x, screen_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity):
+	def __init__(self, screen_x, screen_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity):
 		self.screen_x = screen_x
 		self.screen_y = screen_y
 		self.center_x = center_x
