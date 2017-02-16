@@ -50,6 +50,10 @@ Bi Weekly Planning Meeting: This meeting will be held after In-person meeting. N
 
 -Code to be managed on Github
 
+-The person that created the pull request cannot merge their own code. It must be approved by another team member before being merged by yourself/other members. 
+
+-Issues are to be managed 
+
 -Communication is handled via Slack
 
 
