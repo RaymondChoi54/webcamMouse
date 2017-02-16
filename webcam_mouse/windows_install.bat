@@ -1,6 +1,6 @@
 @echo OFF
 
-:: Last modified on 02/01/17 by Timothy Lock
+:: Last modified on 02/16/17 by Timothy Lock
 
 reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
 
@@ -18,11 +18,10 @@ echo Done
 echo .
 echo .
 
-:: Install Numpy
-echo Installing numpy
-::echo NOTE: Its not possible to do a silent install - so you will have to click through a few dialogs. Sorry!
+:: Install Libraries
+echo Installing Python Libraries
 "C:\Python27\Scripts\pip2.exe" install -U numpy
-::"%~dp0\install\numpy-1.7.1-win32-superpack-python2.7.exe"
+"C:\Python27\Scripts\pip2.exe" install -U pyautogui
 echo Done
 echo .
 echo .
