@@ -1,7 +1,8 @@
 #!python2
 import sys
 import cv2
-from MouseController import MouseControl
+from MouseControl import MouseControl
+
 
 # Create mousecontrol ocject for controlling use
 mouseControl = MouseControl(0, 0, 0, 0,0,0,0)
@@ -76,7 +77,8 @@ while True:
 		cv2.putText(frame,"Track Coordinates: (" + str(nx) + "," + str(ny) + ")", (10,50), cv2.FONT_HERSHEY_PLAIN, 2, (255,0,0))
 		cv2.putText(frame,"press Q to quit", (0,20), cv2.FONT_HERSHEY_PLAIN, 1, (255,0,0))
 
-		mouseControl.
+		# Send coordinates over to mouse control
+		mouseControl.move_mouse(nx, ny) # TODO: Speed up
 
 	# Display the resulting frame
 	cv2.imshow('Face Tracking', frame)
