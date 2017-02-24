@@ -126,7 +126,7 @@ while True:
 
 			# Create Mouse Control if not done
 			if not mouseControl:
-				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
+				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX - (maxX - minX), centerY - (maxY - minY), min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
 			thr = threading.Thread(target=mouseControl.smart_mouse_move, args=(nx, ny), kwargs={})
 			thr.start()
 
@@ -134,6 +134,7 @@ while True:
 	if ((time.time() - startTime) > 0 and (time.time() - startTime) < 37):
 		cv2.imshow("calibrate", frame)
 	else:
+		cv2.destroyWindow('calibrate')
 		cv2.imshow("Face Track", frame)
 	
 	# Quit Detection
