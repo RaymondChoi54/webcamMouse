@@ -3,7 +3,7 @@ import math
 
 class MouseControl(object):
 
-	def __init__(self, webcam_x, webcam_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity, mouse_acc=false, multiplier=1.1, invert=false):
+	def __init__(self, webcam_x, webcam_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity, mouse_acc=False, multiplier=1.1, invert=False):
 
 		self.webcam_x = webcam_x
 		self.webcam_y = webcam_y
