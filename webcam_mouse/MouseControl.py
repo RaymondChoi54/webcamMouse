@@ -15,7 +15,8 @@ class MouseControl(object):
 		self.mouse_acc = mouse_acc
 		self.multiplier = multiplier
 		self.invert = invert
-		self.screen_width, self.screen_height = pyautogui.size() 
+		self.screen_width, self.screen_height = pyautogui.size()
+		pyautogui.FAILSAFE = False;
 		
 	def smart_mouse_move(self, x, y):
 		
@@ -23,8 +24,12 @@ class MouseControl(object):
 		move_y = 0
 		multiply_x = 1
 		multiply_y = 1
-		invert_multi = 1
+		invert_multi = -1
 		current_x, current_y = pyautogui.position()
+
+		if(self.mouse_acc):
+			multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
+			multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 
 		x_displacement = math.fabs(x - self.center_x) 
 		y_displacement = math.fabs(y - self.center_y)
@@ -32,33 +37,21 @@ class MouseControl(object):
 		displacement = (x_displacement ** 2 + y_displacement ** 2) ** 0.5
 
 		if(self.invert):
-			invert_multi = -1
+			invert_multi = 1
 		
 		if(displacement >= self.circ_raid):
-
-			if(self.mouse_acc):
-				multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
-				multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 			
 			if(0 > x - self.center_x):
 				current_x = x_displacement / self.x_sensitivity * multiply_x * invert_multi + current_x
 			else:
-				current_x = - x_displacement / self.x_sensitivity * multiply_x * invert_multi + current_x
+				current_x = (- x_displacement / self.x_sensitivity * multiply_x * invert_multi) + current_x
 				
 			if(0 > y - self.center_y):
 				current_y = y_displacement / self.y_sensitivity * multiply_y * invert_multi + current_y
 			else:
-				current_y = - y_displacement / self.y_sensitivity * multiply_y * invert_multi + current_y
+				current_y = (- y_displacement / self.y_sensitivity * multiply_y * invert_multi) + current_y
 
-			if(current_x < 0):
-				current_x = 0
-			elif(current_x > self.screen_width):
-				current_x = self.screen_width
-
-			if(current_y < 0):
-				current_y = 0
-			elif(current_y > self.screen_height):
-				current_y = self.screen_height
+			
 
 			pyautogui.moveTo(current_x, current_y, duration=0)
 
