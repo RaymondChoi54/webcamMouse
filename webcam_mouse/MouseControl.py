@@ -12,17 +12,22 @@ class MouseControl(object):
 		self.y_sensitivity = y_sensitivity
 		
 	def smart_mouse_move(self, x, y):
+		
+		int move_x = 0
+		int move_y = 0
 		current_x, current_y = pyautogui.position()
+		
 		if(x > self.center_x + circ_raid):
-			pyautogui.moveTo(current_x + x_sensitivity, current_y, duration=0)
+			move_x = x_sensitivity
 		elif(x < self.center_x - circ_raid):
-			pyautogui.moveTo(current_x - x_sensitivity, current_y, duration=0)
+			move_x = - x_sensitivity
 			
-		current_x, current_y = pyautogui.position()
 		if(y > self.center_y + circ_raid):
-			pyautogui.moveTo(current_x, current_y + y_sensitivity, duration=0)
+			move_y = y_sensitivity
 		elif(y < self.center_y - circ_raid):
-			pyautogui.moveTo(current_x, current_y - y_sensitivity, duration=0)
+			move_y = - y_sensitivity
+			
+		pyautogui.moveTo(current_x + move_x, current_y + move_y, duration=0)
 
 	def move_mouse(self, x, y):
 		pyautogui.moveTo(x, y, duration=0)
@@ -36,7 +41,7 @@ class MouseControl(object):
 		self.screen_y = pyautogui.size()[1]
 
 	def mouse_loc(self):
-		pyautogui.position()
+		return pyautogui.position()
 
 	def click(self, type):
 		if(type == "left"):
