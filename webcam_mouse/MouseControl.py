@@ -15,6 +15,7 @@ class MouseControl(object):
 		self.mouse_acc = mouse_acc
 		self.multiplier = multiplier
 		self.invert = invert
+		self.screen_width, self.screen_height = pyautogui.size() 
 		
 	def smart_mouse_move(self, x, y):
 		
@@ -40,17 +41,26 @@ class MouseControl(object):
 				multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 			
 			if(0 > x - self.center_x):
-				move_x = self.x_sensitivity * multiply_x * invert_multi
+				current_x = self.x_sensitivity * multiply_x * invert_multi + current_x
 			else:
-				move_x = - self.x_sensitivity * multiply_x * invert_multi
+				current_x = - self.x_sensitivity * multiply_x * invert_multi + current_x
 				
 			if(0 > y - self.center_y):
-				move_y = self.y_sensitivity * multiply_y * invert_multi
+				current_y = self.y_sensitivity * multiply_y * invert_multi + current_y
 			else:
-				move_y = - self.y_sensitivity * multiply_y * invert_multi
+				current_y = - self.y_sensitivity * multiply_y * invert_multi + current_y
 
-			
-			pyautogui.moveTo(current_x + move_x, current_y + move_y, duration=0)
+			if(current_x < 0):
+				current_x = 0
+			elif(current_x > self.screen_width):
+				current_x = self.screen_width
+
+			if(current_y < 0):
+				current_y = 0
+			elif(current_y > self.screen_height):
+				current_y = self.screen_height
+
+			pyautogui.moveTo(current_x, current_y, duration=0)
 
 	def move_mouse(self, x, y):
 		pyautogui.moveTo(x, y, duration=0)
