@@ -41,14 +41,14 @@ class MouseControl(object):
 				multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 			
 			if(0 > x - self.center_x):
-				current_x = self.x_sensitivity * multiply_x * invert_multi + current_x
+				current_x = x_displacement / self.x_sensitivity * multiply_x * invert_multi + current_x
 			else:
-				current_x = - self.x_sensitivity * multiply_x * invert_multi + current_x
+				current_x = - x_displacement / self.x_sensitivity * multiply_x * invert_multi + current_x
 				
 			if(0 > y - self.center_y):
-				current_y = self.y_sensitivity * multiply_y * invert_multi + current_y
+				current_y = y_displacement / self.y_sensitivity * multiply_y * invert_multi + current_y
 			else:
-				current_y = - self.y_sensitivity * multiply_y * invert_multi + current_y
+				current_y = - y_displacement / self.y_sensitivity * multiply_y * invert_multi + current_y
 
 			if(current_x < 0):
 				current_x = 0
