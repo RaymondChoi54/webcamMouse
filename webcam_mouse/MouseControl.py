@@ -9,7 +9,7 @@ class MouseControl(object):
 		self.webcam_y = webcam_y
 		self.center_x = center_x
 		self.center_y = center_y
-		self.circ_raid = circ_raid
+		self.circ_raid = circ_raid / 3
 		self.x_sensitivity = x_sensitivity
 		self.y_sensitivity = y_sensitivity
 		self.mouse_acc = mouse_acc
