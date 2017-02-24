@@ -3,7 +3,8 @@ import math
 
 class MouseControl(object):
 
-	def __init__(self, webcam_x, webcam_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity, mouse_acc=False, multiplier=1.1):
+	def __init__(self, webcam_x, webcam_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity, mouse_acc=False, multiplier=1.1, invert=False):
+
 		self.webcam_x = webcam_x
 		self.webcam_y = webcam_y
 		self.center_x = center_x
@@ -13,6 +14,9 @@ class MouseControl(object):
 		self.y_sensitivity = y_sensitivity
 		self.mouse_acc = mouse_acc
 		self.multiplier = multiplier
+		self.invert = invert
+		self.screen_width, self.screen_height = pyautogui.size()
+		pyautogui.FAILSAFE = False;
 		
 	def smart_mouse_move(self, x, y):
 		
@@ -20,30 +24,36 @@ class MouseControl(object):
 		move_y = 0
 		multiply_x = 1
 		multiply_y = 1
+		invert_multi = -1
 		current_x, current_y = pyautogui.position()
+
+		if(self.mouse_acc):
+			multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
+			multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 
 		x_displacement = math.fabs(x - self.center_x) 
 		y_displacement = math.fabs(y - self.center_y)
 
 		displacement = (x_displacement ** 2 + y_displacement ** 2) ** 0.5
+
+		if(self.invert):
+			invert_multi = 1
 		
 		if(displacement >= self.circ_raid):
-
-			if(self.mouse_acc):
-				multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
-				multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 			
 			if(0 > x - self.center_x):
-				move_x = self.x_sensitivity * multiply_x
+				current_x = x_displacement / self.x_sensitivity * multiply_x * invert_multi + current_x
 			else:
-				move_x = - self.x_sensitivity * multiply_x
+				current_x = (- x_displacement / self.x_sensitivity * multiply_x * invert_multi) + current_x
 				
 			if(0 > y - self.center_y):
-				move_y = self.y_sensitivity * multiply_y
+				current_y = y_displacement / self.y_sensitivity * multiply_y * invert_multi + current_y
 			else:
-				move_y = - self.y_sensitivity * multiply_y
+				current_y = (- y_displacement / self.y_sensitivity * multiply_y * invert_multi) + current_y
+
 			
-			pyautogui.moveTo(current_x + move_x, current_y + move_y, duration=0)
+
+			pyautogui.moveTo(current_x, current_y, duration=0)
 
 	def move_mouse(self, x, y):
 		pyautogui.moveTo(x, y, duration=0)

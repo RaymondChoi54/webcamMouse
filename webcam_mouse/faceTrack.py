@@ -123,6 +123,7 @@ while True:
 
 		# Send coordinates over to mouse control only if not in calibration mode
 		if ((time.time() - startTime) > 37):
+
 			# Create Mouse Control if not done
 			if not mouseControl:
 				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
