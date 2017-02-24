@@ -4,6 +4,8 @@ import cv2
 from MouseControl import MouseControl
 import threading
 import time
+import pygame
+
 
 # Create mousecontrol ocject for controlling use
 mouseControl = None
@@ -21,7 +23,11 @@ centerX, centerY = None, None
 
 # Begin
 startTime = time.time()
-training = 1
+file = 'assets/voice_training/some.mp3'
+pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load(file)
+pygame.mixer.music.play()
 
 while True:
 	# Capture frame-by-frame
