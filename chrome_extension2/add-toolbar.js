@@ -5,16 +5,17 @@ document.documentElement.style.zoom = base_zoom;
 var height = '120px';
 var iframe = document.createElement('div');
 // iframe.src = chrome.extension.getURL('toolbar.html');
-iframe.style.height = height;
+/*iframe.style.height = height;
 iframe.style.width = '100%';
-iframe.style.position = 'fixed';
+iframe.style.position = 'absolute';
 iframe.style.top = '0';
 iframe.style.left = '0';
 iframe.style.zIndex = '938089'; // Some high value
-iframe.background = 'yellow';
+iframe.background = 'yellow';*/
 
 var btn = document.createElement("BUTTON");
-btn.setAttribute("style", "	font-size:20px;	font-style:italic;	font-weight:bold;	height: 100px;	width: 100px;	border-radius: 50%;	border: 1px solid red;");
+btn.setAttribute("class","btn-circle");
+btn.setAttribute("style", "	font-size:20px;	font-style:italic;	font-weight:bold;position: fixed;left: 0; top: 0;");
 var t = document.createTextNode("NEW TAB");
 btn.appendChild(t);
 btn.onclick = function(){window.open('http://www.google.com', '_blank');};
@@ -22,7 +23,8 @@ btn.onclick = function(){window.open('http://www.google.com', '_blank');};
 iframe.appendChild(btn);
 
 var btn2 = document.createElement("BUTTON");
-btn2.setAttribute("style", "	font-size:20px;	font-style:italic;	font-weight:bold;	height: 100px;	width: 100px;	border-radius: 50%;	border: 1px solid red;");
+btn2.setAttribute("class","btn-circle");
+btn2.setAttribute("style", "	font-size:20px;	font-style:italic;	font-weight:bold; position: fixed;left: 0; bottom: 0;");
 var t2 = document.createTextNode("ZOOM IN");
 btn2.appendChild(t2);
 btn2.onclick = function(){
@@ -33,7 +35,8 @@ btn2.onclick = function(){
 iframe.appendChild(btn2);
 
 var btn3 = document.createElement("BUTTON");
-btn3.setAttribute("style", "	font-size:20px;	font-style:italic;	font-weight:bold;	height: 100px;	width: 100px;	border-radius: 50%;	border: 1px solid red;");
+btn3.setAttribute("class","btn-circle");
+btn3.setAttribute("style", "	font-size:20px;	font-style:italic;	font-weight:bold;position: fixed;right: 0; bottom: 8px;");
 var t3 = document.createTextNode("ZOOM OUT");
 btn3.appendChild(t3);
 btn3.onclick = function(){
@@ -44,7 +47,8 @@ btn3.onclick = function(){
 iframe.appendChild(btn3);
 
 var btn4 = document.createElement("BUTTON");
-btn4.setAttribute("style", "	font-size:20px;	font-style:italic;	font-weight:bold;	height: 100px;	width: 100px;	border-radius: 50%;	border: 1px solid red;");
+btn4.setAttribute("class","btn-circle");
+btn4.setAttribute("style", "	font-size:20px;	font-style:italic;font-weight:bold; position: fixed;right: 0; top: 0;");
 var t4 = document.createTextNode("RESET");
 btn4.appendChild(t4);
 btn4.onclick = function(){
