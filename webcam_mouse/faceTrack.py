@@ -47,13 +47,12 @@ while True:
 		minSize=(30, 30),
 		flags=cv2.CASCADE_SCALE_IMAGE
 	)
-	print(time.time() - startTime)
+	#print(time.time() - startTime)
 
 	for (x, y, w, h) in faces:
 		# Calibration
 		if ((time.time() - startTime) > 6 and (time.time() - startTime) < 13):
 			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 13 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
-			cv2.imshow('Face Tracking', frame)
 			# Obtain center
 			centerX = x + (w/2)
 			centerY = y + (h/2)
@@ -66,7 +65,6 @@ while True:
 				minY = centerY
 		elif ((time.time() - startTime) > 12 and (time.time() - startTime) < 37):
 			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 37 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
-			cv2.imshow('Face Tracking', frame)
 			# Keep getting max and min
 			if (x + (w/2) < minX):
 				minX = x + (w/2)
@@ -76,6 +74,10 @@ while True:
 				maxX = x + (w/2)
 			if ((y + (h/2)) > maxY):
 				maxY = y + (h/2)
+
+			# Obtain center
+			centerX = (maxX - (minX/2))
+			centerY = (maxY - (minY/2))
 			
 
 		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 1) # Draw a rectangle around the faces
@@ -126,7 +128,7 @@ while True:
 
 			# Create Mouse Control if not done
 			if not mouseControl:
-				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX - (maxX - minX), centerY - (maxY - minY), min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
+				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
 			thr = threading.Thread(target=mouseControl.smart_mouse_move, args=(nx, ny), kwargs={})
 			thr.start()
 
