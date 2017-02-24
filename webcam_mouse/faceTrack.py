@@ -50,7 +50,6 @@ while True:
 		minSize=(30, 30),
 		flags=cv2.CASCADE_SCALE_IMAGE
 	)
-	#print(time.time() - startTime)
 
 	for (x, y, w, h) in faces:
 		# Calibration
@@ -85,35 +84,6 @@ while True:
 			centerY = (maxY + minY)/2
 			cv2.rectangle(frame, (centerX, centerY), (centerX + 1, centerY + 1), (255, 255, 255), 1) # Draw a center dot
 			cv2.rectangle(frame, (minX, minY), (maxX, maxY), (255, 0, 0), 1) # Draw a rectangle around the calibration
-
-		# ROI top for both eyes
-		roi_eyes_gray = gray[y+(h/4):y+(3*h/5), x:w+x]
-		roi_eyes_color = frame[y+(h/4):y+(3*h/5), x:w+x]
-
-		eyes = eyesCascade.detectMultiScale(roi_eyes_gray)
-		for (ex,ey,ew,eh) in eyes:
-			# ROI top for left eye
-			roi_left_eye_gray = roi_eyes_gray[ey:ey+eh, ex:ex+(ew/2)]
-			roi_left_eye_color = roi_eyes_color[ey:ey+eh, ex:ex+(ew/2)]
-
-			# ROI top for right eye
-			roi_right_eye_gray = roi_eyes_gray[ey:ey+eh, ex+(ew/2):ex+ew]
-			roi_right_eye_color = roi_eyes_color[ey:ey+eh, ex+(ew/2):ex+ew]
-
-			# Debug
-			cv2.imshow('Face Crop', cv2.resize(frame[y:y+h, x:w+x], (200, 200)))
-			cv2.imshow('Eyes Crop', cv2.resize(roi_eyes_color[ey:ey+eh, ex:ex+ew], (200, 80)))
-			cv2.imshow('Left Eye Crop', cv2.resize(roi_left_eye_color, (150, 120)))
-			cv2.imshow('Right Eye Crop', cv2.resize(roi_right_eye_color, (150, 120)))
-
-			# TODO: Blink detection
-			lefteye = leftEyeOpen.detectMultiScale(roi_left_eye_gray)
-			for (ex,ey,ew,eh) in lefteye:
-				cv2.rectangle(roi_left_eye_color,(ex,ey),(ex+ew,ey+eh),(255,255,255),1)
-
-			righteye = rightEyeOpen.detectMultiScale(roi_left_eye_gray)
-			for (ex,ey,ew,eh) in righteye:
-				cv2.rectangle(roi_right_eye_color,(ex,ey),(ex+ew,ey+eh),(255,255,255),1)
 
 		# Draw crosshair on person
 		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 1) # Draw a rectangle around the faces	
