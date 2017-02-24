@@ -115,6 +115,9 @@ while True:
 		cv2.line(frame, ((x + w / 2), 0), ((x + w / 2), frameWidth), (0,0,255), 1)
 		cv2.line(frame, (0, (y + h / 2)), (frameHeight, (y + h / 2)), (0,0,255), 1)
 
+		
+
+
 		# Get nose coordinates
 		nx = (x + w / 2)
 		ny = (y + h / 2)
