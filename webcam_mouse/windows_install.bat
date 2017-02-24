@@ -22,6 +22,7 @@ echo .
 echo Installing Python Libraries
 "C:\Python27\Scripts\pip2.exe" install -U numpy
 "C:\Python27\Scripts\pip2.exe" install -U pyautogui
+msiexec /i "%~dp0\install\pygame-1.9.1.win32-py2.7.msi" /quiet
 echo Done
 echo .
 echo .
