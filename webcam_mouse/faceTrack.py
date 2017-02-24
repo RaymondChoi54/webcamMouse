@@ -52,7 +52,7 @@ while True:
 	for (x, y, w, h) in faces:
 		# Calibration
 		if ((time.time() - startTime) > 6 and (time.time() - startTime) < 13):
-			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 13 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
+			cv2.putText(frame,"Stage 1 Calibration -- Seconds Left: " + str((startTime + 13 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
 			# Obtain center
 			centerX = x + (w/2)
 			centerY = y + (h/2)
@@ -76,13 +76,14 @@ while True:
 				maxY = y + (h/2)
 
 			# Obtain center
-			centerX = (maxX - (minX/2))
-			centerY = (maxY - (minY/2))
-			
+			centerX = (maxX + minX)/2
+			centerY = (maxY + minY)/2
+			cv2.rectangle(frame, (centerX, centerY), (centerX + 1, centerY + 1), (255, 255, 255), 1) # Draw a rectangle around the faces
 
 		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 1) # Draw a rectangle around the faces
 		if maxX:
 			cv2.rectangle(frame, (minX, minY), (maxX, maxY), (255, 0, 0), 1) # Draw a rectangle around the calibration
+		
 		# ROI top for both eyes
 		roi_eyes_gray = gray[y+(h/4):y+(3*h/5), x:w+x]
 		roi_eyes_color = frame[y+(h/4):y+(3*h/5), x:w+x]
@@ -146,8 +147,3 @@ while True:
 # When everything is done, release the capture
 video_capture.release()
 cv2.destroyAllWindows()
-
-
-# Helper Functions
-def playAudio(sound):
-	pass
