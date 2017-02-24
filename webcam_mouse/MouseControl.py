@@ -13,8 +13,8 @@ class MouseControl(object):
 		
 	def smart_mouse_move(self, x, y):
 		
-		int move_x = 0
-		int move_y = 0
+		move_x = 0
+		move_y = 0
 		current_x, current_y = pyautogui.position()
 		
 		if(x > self.center_x + circ_raid):
