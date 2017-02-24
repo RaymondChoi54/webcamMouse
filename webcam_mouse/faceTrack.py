@@ -54,8 +54,8 @@ while True:
 				minX = centerX
 				maxY = centerY
 				minY = centerY
-		elif ((time.time() - startTime) > 5 and (time.time() - startTime) < 30):
-			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 30 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
+		elif ((time.time() - startTime) > 5 and (time.time() - startTime) < 15):
+			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 15 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
 			# Keep getting max and min
 			if (x + (w/2) < minX):
 				minX = x + (w/2)
@@ -111,7 +111,7 @@ while True:
 		cv2.putText(frame,"press Q to quit", (0,20), cv2.FONT_HERSHEY_PLAIN, 1, (255,0,0))
 
 		# Send coordinates over to mouse control only if not in calibration mode
-		if ((time.time() - startTime) > 30):
+		if ((time.time() - startTime) > 15):
 			# Create Mouse Control if not done
 			if not mouseControl:
 				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
