@@ -3,7 +3,7 @@ import math
 
 class MouseControl(object):
 
-	def __init__(self, webcam_x, webcam_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity, mouse_acc=false, multiplier=1.1):
+	def __init__(self, webcam_x, webcam_y, center_x, center_y, circ_raid, x_sensitivity, y_sensitivity, mouse_acc=False, multiplier=1.1):
 		self.webcam_x = webcam_x
 		self.webcam_y = webcam_y
 		self.center_x = center_x
@@ -27,21 +27,21 @@ class MouseControl(object):
 
 		displacement = (x_displacement ** 2 + y_displacement ** 2) ** 0.5
 		
-		if(displacement >= self.radius):
+		if(displacement >= self.circ_raid):
 
-			if(mouse_acc):
-				multiply_x = multiplier ** (math.fabs(x - self.center_x) / circ_raid)
-				multiply_y = multiplier ** (math.fabs(y - self.center_y) / circ_raid)
+			if(self.mouse_acc):
+				multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
+				multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 			
 			if(0 > x - self.center_x):
-				move_x = x_sensitivity * multiply_x
+				move_x = self.x_sensitivity * multiply_x
 			else:
-				move_x = - x_sensitivity * multiply_x
+				move_x = - self.x_sensitivity * multiply_x
 				
 			if(0 > y - self.center_y):
-				move_y = y_sensitivity * multiply_y
+				move_y = self.y_sensitivity * multiply_y
 			else:
-				move_y = - y_sensitivity * multiply_y
+				move_y = - self.y_sensitivity * multiply_y
 			
 			pyautogui.moveTo(current_x + move_x, current_y + move_y, duration=0)
 

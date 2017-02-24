@@ -115,7 +115,7 @@ while True:
 			# Create Mouse Control if not done
 			if not mouseControl:
 				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
-			thr = threading.Thread(target=mouseControl.move_mouse, args=(nx, ny), kwargs={})
+			thr = threading.Thread(target=mouseControl.smart_mouse_move, args=(nx, ny), kwargs={})
 			thr.start()
 
 	# Display the resulting frame
