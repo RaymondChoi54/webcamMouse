@@ -30,7 +30,7 @@ class MouseControl(object):
 		current_x, current_y = pyautogui.position()
 
 		if(self.mouse_acc):
-			multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raqid)
+			multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
 			multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 
 		x_displacement = math.fabs(x - self.center_x) 
