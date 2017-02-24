@@ -78,12 +78,9 @@ while True:
 			# Obtain center
 			centerX = (maxX + minX)/2
 			centerY = (maxY + minY)/2
-			cv2.rectangle(frame, (centerX, centerY), (centerX + 1, centerY + 1), (255, 255, 255), 1) # Draw a rectangle around the faces
-
-		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 1) # Draw a rectangle around the faces
-		if maxX:
+			cv2.rectangle(frame, (centerX, centerY), (centerX + 1, centerY + 1), (255, 255, 255), 1) # Draw a center dot
 			cv2.rectangle(frame, (minX, minY), (maxX, maxY), (255, 0, 0), 1) # Draw a rectangle around the calibration
-		
+
 		# ROI top for both eyes
 		roi_eyes_gray = gray[y+(h/4):y+(3*h/5), x:w+x]
 		roi_eyes_color = frame[y+(h/4):y+(3*h/5), x:w+x]
@@ -114,6 +111,7 @@ while True:
 		#		cv2.rectangle(roi_right_eye_color,(ex,ey),(ex+ew,ey+eh),(0,255,255),1)
 
 		# Draw crosshair on person
+		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 1) # Draw a rectangle around the faces	
 		cv2.line(frame, ((x + w / 2), 0), ((x + w / 2), frameWidth), (0,0,255), 1)
 		cv2.line(frame, (0, (y + h / 2)), (frameHeight, (y + h / 2)), (0,0,255), 1)
 
@@ -126,8 +124,7 @@ while True:
 
 		# Send coordinates over to mouse control only if not in calibration mode
 		if ((time.time() - startTime) > 37):
-
-			# Create Mouse Control if not done
+			# Create Mouse Control if not created
 			if not mouseControl:
 				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
 			thr = threading.Thread(target=mouseControl.smart_mouse_move, args=(nx, ny), kwargs={})
@@ -137,6 +134,7 @@ while True:
 	if ((time.time() - startTime) > 0 and (time.time() - startTime) < 37):
 		cv2.imshow("calibrate", frame)
 	else:
+		cv2.circle(frame, (centerX, centerY), min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), (255, 255, 255), 1) # Draw curcle around area
 		cv2.destroyWindow('calibrate')
 		cv2.imshow("Face Track", frame)
 	
