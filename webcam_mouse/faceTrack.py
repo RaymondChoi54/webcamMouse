@@ -4,6 +4,8 @@ import cv2
 from MouseControl import MouseControl
 import threading
 import time
+import pygame
+
 
 # Create mousecontrol ocject for controlling use
 mouseControl = None
@@ -20,8 +22,14 @@ maxX, maxY, minX, minY = None, None, None, None
 centerX, centerY = None, None
 
 # Begin
+cv2.namedWindow("calibrate", cv2.WND_PROP_FULLSCREEN)
+cv2.setWindowProperty("calibrate",cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
+file = 'assets/voice_training/calibrationonly.mp3'
+pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load(file)
+pygame.mixer.music.play()
 startTime = time.time()
-training = 1
 
 while True:
 	# Capture frame-by-frame
@@ -39,11 +47,13 @@ while True:
 		minSize=(30, 30),
 		flags=cv2.CASCADE_SCALE_IMAGE
 	)
+	print(time.time() - startTime)
 
 	for (x, y, w, h) in faces:
 		# Calibration
-		if ((time.time() - startTime) > 0 and (time.time() - startTime) < 5):
-			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 5 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
+		if ((time.time() - startTime) > 6 and (time.time() - startTime) < 13):
+			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 13 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
+			cv2.imshow('Face Tracking', frame)
 			# Obtain center
 			centerX = x + (w/2)
 			centerY = y + (h/2)
@@ -54,8 +64,9 @@ while True:
 				minX = centerX
 				maxY = centerY
 				minY = centerY
-		elif ((time.time() - startTime) > 5 and (time.time() - startTime) < 15):
-			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 15 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
+		elif ((time.time() - startTime) > 12 and (time.time() - startTime) < 37):
+			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 37 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
+			cv2.imshow('Face Tracking', frame)
 			# Keep getting max and min
 			if (x + (w/2) < minX):
 				minX = x + (w/2)
@@ -111,7 +122,8 @@ while True:
 		cv2.putText(frame,"press Q to quit", (0,20), cv2.FONT_HERSHEY_PLAIN, 1, (255,0,0))
 
 		# Send coordinates over to mouse control only if not in calibration mode
-		if ((time.time() - startTime) > 15):
+		if ((time.time() - startTime) > 37):
+
 			# Create Mouse Control if not done
 			if not mouseControl:
 				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
@@ -119,8 +131,12 @@ while True:
 			thr.start()
 
 	# Display the resulting frame
-	cv2.imshow('Face Tracking', frame)
-
+	if ((time.time() - startTime) > 0 and (time.time() - startTime) < 37):
+		cv2.imshow("calibrate", frame)
+	else:
+		cv2.imshow("Face Track", frame)
+	
+	# Quit Detection
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 
