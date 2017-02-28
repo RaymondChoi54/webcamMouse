@@ -1,4 +1,4 @@
-# YOUR PRODUCT/TEAM NAME
+# LIMBSFREE GROUP 14
 
  > _Note:_ This document is meant to be written during (or shortly after) your initial planning meeting.     
  > It does not really make sense for you to edit this document much (if at all) while working on the project - Instead, at the end of the planning phase, you can refer back to this document and decide which parts of your plan you are happy with and which parts you would like to change.
@@ -8,6 +8,9 @@
 
  * Start date: February 17th 2017
  * End date: March 6th 2017
+
+# Before We Begin
+One of the issues that were brought up by the TA in Iteration 1 was the misunderstanding of the main focus of the project. While it may seem that the webcam control software was our goal, **its not**. It merely acts as a tool to reach our true goal - to create a web UI to bridge the gap between the inaccuracies of using a webcam to control the mouse and the small buttons of a normal computer/web. Our main focus is an all-in-one solution which focuses on a chrome extension/landing page to create an exclusive UI for the disabled person. We understand that we were not detailed enough in Iteration 1 and have made a stronger attempt to communicate that point through in this iteration as well as being more detailed in this plan. 
 
 ## Process
 
@@ -44,6 +47,16 @@ List/describe the artifacts you will produce in order to organize your team.
    * How do you keep track of what needs to get done?
    * How do you prioritize tasks?
    * How do tasks get assigned to team members?
+
+-To-do list in a kanban/scrum fashion. Hosted on Trello. This allows for the prioritization and tracking of the progress of each task. It also allows for members to input new ideas into the board as well as find out who is working on what task quickly. 
+-Priority are determined in our planning meetings and labelled using labels in our Trello. For example, a high priority is to get a major feature working (such as having the extension overlay properly) and fixing major bugs while new minor features are prioritized lower. We aim to create a stable program first before adding new features. 
+-Since each member knows their role, they are assigned to each card on Trello that matches their role. To be more precise, Raymond and timothy focus on the mouse webcam control **tool**, Rohan focuses on the landing page, and Kevin, Brock, James focuses on **the main purpose** of our project - the Chrome extension.
+-Scheduling is determined in our planning meetings and assigned on the card in Trello so that it is easy to view due dates. Please refer up to the prioritization point for more information. 
+-Code to be managed on Github. Please refer to the **Git / GitHub workflow** section for more information on our workflow.
+-The person that created the pull request cannot merge their own code. It must be approved by another team member before being merged by yourself/other members. By doing this we make sure two experts on that section of the code has looked at the code; ensuring that the code runs according to specification.
+-Issues are to be managed on Trello. New issues are opened up with a high priority label and assigned to the respective members who are working on that feature. The issue is also communicated through Slack. 
+-Communication is handled via Slack. It is used because of its integration into Trello, Github, and its ability to add bots to help increase the productivity workflow of the chat. The ability to support channels also allows for chat between subsystem members without cluttering the general chat. 
+
 
 #### Git / GitHub workflow
 
@@ -89,6 +102,9 @@ List/describe the artifacts you will produce in order to present your project id
  * Be concise, yet precise.         
    For example: "Build the website" is not precise at all, but "Build a static home page and upload it somewhere, so that it is publicly accessible" is much clearer.
 
-Create a demo video that shows mouse control using facial features. This will be run using the actual project and no trickery/mock-ups will be used. The purpose of this video is to demo the state of the current project as well as allow user feedback towards the usability of the software as well as any improvements that could be made. This will be used in the event that any live-demos fail due to the environmental reasons that are outside of our control including but certainly not limited to lighting, power issues, webcam issues, computer issues, and possibly more. 
+Create a demo video that shows mouse control using facial features. This will be run using the actual project and no trickery/mock-ups will be used. The purpose of this video is to demo the state of the current project as well as allow user feedback towards the usability of the software as well as any improvements that could be made. This will be used in the event that any live-demos fail due to the environmental reasons that are outside of our control including but certainly not limited to lighting, power issues, webcam issues, computer issues, and possibly more. The plan is to host this video on the Github. If not, it will be hosted on an external DigitalOcean server located in their Toronto datacenter and cached by CloudFlare’s CDN to be publicly accessible. It potentially will be embedded in the product page (for our project) also being hosted on an external DigitalOcean server (that may or may not be the same as the server hosting the video) located in their Toronto datacenter and cached by CloudFlare’s CDN to be publicly accessible.*
 
-Create a chrome extension that creates a UI when browsing any webpage. This will take the form of buttons that overlay on top of the webpage allowing for multiple functionalities including zooming, creating new tabs, etc. It will also include a landing page that is optimized for use with webcam control software. The website that was previously mentioned in the past iteration will be included in this extension. It will be hosted locally while possibly making use of outside sources to obtain information such as weather, etc. This will be included in a live demo as well as the video. It plays a **significant** role as it is **the main purpose of our project (and not on the webcam mouse control software)** 
+Create a chrome extension that creates a UI when browsing any webpage. This will take the form of buttons that overlay on top of the webpage allowing for multiple functionalities including zooming, creating new tabs, etc. It will also include a landing page that is optimized for use with webcam control software. The website that was previously mentioned in the past iteration will be included in this extension locally and will not be hosted on a web server. It will be hosted locally while possibly making use of outside sources to obtain information such as weather, etc. This will be included in a live demo as well as the video. It plays a **significant** role as it is **the main purpose of our project (and not on the webcam mouse control software)** 
+
+
+* subject to availability and uptime of the server. May change in the future due to server upgrades/migrations.
