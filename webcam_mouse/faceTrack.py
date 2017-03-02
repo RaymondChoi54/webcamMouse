@@ -18,6 +18,12 @@ rightEyeOpen = cv2.CascadeClassifier(sys.argv[4])
 
 # Set up
 video_capture = cv2.VideoCapture(0)
+# Try to get max resolution
+try:
+	video_capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+	video_capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 1024)
+except:
+	pass
 mouseInstructionImg = cv2.imread('assets\pictures\moveFace.png')
 clickInstructionImg = cv2.imread('assets\pictures\holdClick.png')
 nx, ny = 0, 0;
