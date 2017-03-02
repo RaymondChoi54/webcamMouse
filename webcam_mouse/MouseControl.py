@@ -41,7 +41,14 @@ class MouseControl(object):
 		if(self.invert):
 			invert_multi = 1
 
-		if(time.time() - self.start_time > 5):
+		if(time.time() - self.start_time > 5 and (current_y < 200 or current_y > self.screen_height - 200)):
+			if(current_y < 200):
+				pyautogui.click()
+				pyautogui.scroll(30)
+			elif(current_y > self.screen_height - 200):
+				pyautogui.click()
+				pyautogui.scroll(-30)
+		elif(time.time() - self.start_time > 5):
 			pyautogui.click()
 			self.start_time = time.time()
 		
