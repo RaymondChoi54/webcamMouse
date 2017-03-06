@@ -18,8 +18,14 @@ rightEyeOpen = cv2.CascadeClassifier(sys.argv[4])
 
 # Set up
 video_capture = cv2.VideoCapture(0)
-mouseInstructionImg = cv2.imread('assets\pictures\move.png')
-clickInstructionImg = cv2.imread('assets\pictures\click.png')
+# Try to get max resolution
+try:
+	video_capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+	video_capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 1024)
+except:
+	pass
+mouseInstructionImg = cv2.imread('assets\pictures\moveFace.png')
+clickInstructionImg = cv2.imread('assets\pictures\holdClick.png')
 nx, ny = 0, 0;
 maxX, maxY, minX, minY = None, None, None, None
 centerX, centerY = None, None
@@ -27,12 +33,14 @@ centerX, centerY = None, None
 # Begin Program
 cv2.namedWindow("calibrate", cv2.WND_PROP_FULLSCREEN)
 cv2.setWindowProperty("calibrate",cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
+
 file = 'assets/voice_training/calibrationonly.mp3'
 pygame.init()
 pygame.mixer.init()
 pygame.mixer.music.load(file)
 pygame.mixer.music.play()
 startTime = time.time()
+debug_training = 1
 
 while True:
 	# Capture frame-by-frame
@@ -50,13 +58,12 @@ while True:
 		minSize=(30, 30),
 		flags=cv2.CASCADE_SCALE_IMAGE
 	)
-	#print(time.time() - startTime)
 
 	for (x, y, w, h) in faces:
 		# Calibration
 		if ((time.time() - startTime) > 6 and (time.time() - startTime) < 13):
 			cv2.putText(frame,"Stage 1 Calibration -- Seconds Left: " + str((startTime + 13 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
-			cv2.imshow("Instructions", mouseInstructionImg)
+			
 			# Obtain center
 			centerX = x + (w/2)
 			centerY = y + (h/2)
@@ -69,7 +76,11 @@ while True:
 				minY = centerY
 		elif ((time.time() - startTime) > 12 and (time.time() - startTime) < 37):
 			cv2.putText(frame,"Stage 2 Calibration -- Seconds Left: " + str((startTime + 37 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
-			cv2.imshow("Instructions", clickInstructionImg)
+			if ((time.time() - startTime) > 12 and (time.time() - startTime) < 27):
+				frame[0:0+mouseInstructionImg.shape[0], 0:0+mouseInstructionImg.shape[1]] = mouseInstructionImg
+			else:
+				frame[0:0+clickInstructionImg.shape[0], 0:0+clickInstructionImg.shape[1]] = clickInstructionImg
+
 			# Keep getting max and min
 			if (x + (w/2) < minX):
 				minX = x + (w/2)
@@ -86,35 +97,6 @@ while True:
 			cv2.rectangle(frame, (centerX, centerY), (centerX + 1, centerY + 1), (255, 255, 255), 1) # Draw a center dot
 			cv2.rectangle(frame, (minX, minY), (maxX, maxY), (255, 0, 0), 1) # Draw a rectangle around the calibration
 
-		# ROI top for both eyes
-		roi_eyes_gray = gray[y+(h/4):y+(3*h/5), x:w+x]
-		roi_eyes_color = frame[y+(h/4):y+(3*h/5), x:w+x]
-
-		eyes = eyesCascade.detectMultiScale(roi_eyes_gray)
-		for (ex,ey,ew,eh) in eyes:
-			# ROI top for left eye
-			roi_left_eye_gray = roi_eyes_gray[ey:ey+eh, ex:ex+(ew/2)]
-			roi_left_eye_color = roi_eyes_color[ey:ey+eh, ex:ex+(ew/2)]
-
-			# ROI top for right eye
-			roi_right_eye_gray = roi_eyes_gray[ey:ey+eh, ex+(ew/2):ex+ew]
-			roi_right_eye_color = roi_eyes_color[ey:ey+eh, ex+(ew/2):ex+ew]
-
-			# Debug
-			cv2.imshow('Face Crop', cv2.resize(frame[y:y+h, x:w+x], (200, 200)))
-			cv2.imshow('Eyes Crop', cv2.resize(roi_eyes_color[ey:ey+eh, ex:ex+ew], (200, 80)))
-			cv2.imshow('Left Eye Crop', cv2.resize(roi_left_eye_color, (150, 120)))
-			cv2.imshow('Right Eye Crop', cv2.resize(roi_right_eye_color, (150, 120)))
-
-			# TODO: Blink detection
-			lefteye = leftEyeOpen.detectMultiScale(roi_left_eye_gray)
-			for (ex,ey,ew,eh) in lefteye:
-				cv2.rectangle(roi_left_eye_color,(ex,ey),(ex+ew,ey+eh),(255,255,255),1)
-
-			righteye = rightEyeOpen.detectMultiScale(roi_left_eye_gray)
-			for (ex,ey,ew,eh) in righteye:
-				cv2.rectangle(roi_right_eye_color,(ex,ey),(ex+ew,ey+eh),(255,255,255),1)
-
 		# Draw crosshair on person
 		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 1) # Draw a rectangle around the faces	
 		cv2.line(frame, ((x + w / 2), 0), ((x + w / 2), frameWidth), (0,0,255), 1)
@@ -124,7 +106,7 @@ while True:
 		nx = (x + w / 2)
 		ny = (y + h / 2)
 
-		cv2.putText(frame,"Track Coordinates: (" + str(nx) + "," + str(ny) + ")", (10,50), cv2.FONT_HERSHEY_PLAIN, 2, (255,0,0))
+		#cv2.putText(frame,"Track Coordinates: (" + str(nx) + "," + str(ny) + ")", (10,50), cv2.FONT_HERSHEY_PLAIN, 2, (255,0,0))
 		cv2.putText(frame,"press Q to quit", (0,20), cv2.FONT_HERSHEY_PLAIN, 1, (255,0,0))
 
 		# Send coordinates over to mouse control only if not in calibration mode
@@ -132,6 +114,7 @@ while True:
 			# Create Mouse Control if not created
 			if not mouseControl:
 				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 50, 50)
+			
 			thr = threading.Thread(target=mouseControl.smart_mouse_move, args=(nx, ny), kwargs={})
 			thr.start()
 
