@@ -21,8 +21,6 @@ Describe the different roles on the team and the responsibilities associated wit
 
 Create a Chrome extension that creates an UI for easier and more accurate navigation. It will make buttons appear on the website which offer functionality which makes it easier to browse the internet. Such functions include zoom buttons, back and forward buttons, and etc
 
-Create a website which provides the software to download, a video demo, and a mechanism for feedback 
-
 Create a Python application that allows for the user to control the mouse cursor with the webcamera. **It is important to note that this is not the focus of our product; but rather a tool to achieve the purpose of ease-of-navigation**. This will be done by Raymond and Timothy. This goal is around 50% completed as of the end of Iteration 1. This program is composed of two pieces - a python program to track the face, as well as a python program that can accept inputs to move the mouse cursor around the screen. **This program’s control mechanism is different from other webcam control software as this program treats the controlling mechanism as a Touchpoint rather than a Trackpad. (Again, not the main purpose of this project, but worth noting)**
 
 #### Events
@@ -88,8 +86,6 @@ Pull-requests reviews will be made by other individuals that are familiar with t
  * Order the items from most to least important.
  * Feel free (but not obligated) to specify some/all tasks as user stories.
 
-Complete website back end. Set up basic front end. This product will be the landing page once the program initially opens. From this page, the user will be able to perform a variety of operations including weather, web navigation, etc. It will also integrate nicely into the web extension in the sense that no buttons will overlap. **This is the main purpose of our application - to create an easy-to-navigate UI for people without limbs using the webcam as a tool**.
-
 Have a Chrome extension that creates a UI with 4 buttons for zooming in, zooming out, reset, and create a new tab. **This is another major feature to our application that differentiates us from other existing products. The buttons on the UI will make navigation on Chrome much easier.**
 
 Look into ways for user to install a chrome extension. The goal is to have this chrome extension install along with the program to minimize the user interaction that is required to install the program. Preliminary research shows that one of our members might need to create a Google Developer account. If this is true, the plan is to create a Google Developer account
@@ -109,7 +105,7 @@ List/describe the artifacts you will produce in order to present your project id
 
 Create a demo video that shows mouse control using facial features. This will be run using the actual project and no trickery/mock-ups will be used. The purpose of this video is to demo the state of the current project as well as allow user feedback towards the usability of the software as well as any improvements that could be made. This will be used in the event that any live-demos fail due to the environmental reasons that are outside of our control including but certainly not limited to lighting, power issues, webcam issues, computer issues, and possibly more. The plan is to host this video on the Github. If not, it will be hosted on an external DigitalOcean server located in their Toronto datacenter and cached by CloudFlare’s CDN to be publicly accessible. It potentially will be embedded in the product page (for our project) also being hosted on an external DigitalOcean server (that may or may not be the same as the server hosting the video) located in their Toronto datacenter and cached by CloudFlare’s CDN to be publicly accessible (subject to availability and uptime of the server. May change in the future due to server upgrades/migrations.)
 
-Create a chrome extension that creates a UI when browsing any webpage. This will take the form of buttons that overlay on top of the webpage allowing for multiple functionalities including zooming, creating new tabs, etc. It will also include a landing page that is optimized for use with webcam control software. The website that was previously mentioned in the past iteration will be included in this extension locally and will not be hosted on a web server. It will be hosted locally while possibly making use of outside sources to obtain information such as weather, etc. This will be included in a live demo as well as the video. It plays a **significant** role as it is **the main purpose of our project (and not on the webcam mouse control software)** 
+Create a chrome extension that creates a UI when browsing any webpage. This will take the form of buttons that overlay on top of the webpage allowing for multiple functionalities including zooming, creating new tabs, etc. It plays a **significant** role as it is **the main purpose of our project (and not on the webcam mouse control software)** 
 
 
 
