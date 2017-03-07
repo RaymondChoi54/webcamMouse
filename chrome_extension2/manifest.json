@@ -6,6 +6,7 @@
   "description": "testing",
 
   "content_scripts": [{
+    "css": ["add-toolbar.css"],
     "js": ["add-toolbar.js"],
     "matches": ["<all_urls>"]
   }]
