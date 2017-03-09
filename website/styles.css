@@ -3,7 +3,32 @@ body {
 }
 
 #section1 {
+	padding:25px;
 	padding-top:50px;
-	height:500px;
+	height:200px;
+}
 
+#section2 {
+	padding:25px;
+	height:200px;
+}
+
+#section3 {
+	padding:25px;
+	height:200px;
+}
+
+#section4 {
+	padding:25px;
+	height:200px;
+}
+
+#section5 {
+	padding:25px;
+	height:200px;
+}
+
+#section6 {
+	padding:25px;
+	height:200px;
 }
