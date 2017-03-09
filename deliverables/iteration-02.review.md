@@ -64,11 +64,11 @@ For our Chrome extension, create a button that hides all other buttons. This giv
 
 The chrome extension which created a UI containing buttons for zooming in, zooming out, reset zoom, and create new tab was completed. We can refer to the demo video we filmed to show this. 
 
-<Install extension>
+***Install extension
 
-<Voice control>
+***Voice control
 
-<Brainstorm ideas for chrome extension>
+***Brainstorm ideas for chrome extension>
 
 Lastly, progress was made on both the website and the landing page (despite the fact that the team member in charge of the landing page didn't realize he had to do it). 
 
@@ -78,7 +78,7 @@ Lastly, progress was made on both the website and the landing page (despite the 
  * For each goal/task, explain why it was not met/completed.      
    e.g. Did you change your mind, or did you just not get to it yet?
 
-<State what hasn't been completed>
+***State what hasn't been completed
 
 ## Meeting Highlights
 
