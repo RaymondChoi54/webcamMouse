@@ -1,5 +1,9 @@
+body {
+	position:relative;
+}
 
-nav {
-	display:block;
-	font-weight:bold;
+#section1 {
+	padding-top:50px;
+	height:500px;
+
 }
