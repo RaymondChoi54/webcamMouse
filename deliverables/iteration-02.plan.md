@@ -96,6 +96,8 @@ Look for ways to integrate voice control into our chrome extension. Ideally, the
 
 Brainstorm for more ideas for our chrome extension. Although not necessarily to be completed this iteration, there is a general consensus among the group members that the Chrome extension could use more features while maintaining its minimalistic form. Any new ideas are to be added to the Trello.
 
+Make significant progress on the new tab landing page and the website.
+
 #### Artifacts
 
 List/describe the artifacts you will produce in order to present your project idea.
