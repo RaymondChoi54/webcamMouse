@@ -72,12 +72,6 @@ For our Chrome extension, create a button that hides all other buttons. This giv
 
 Going into the next iteration, our main insights are:
 
- * 2 - 4 items
- * Short (no more than one short paragraph per item)
- * High-level concepts that should guide your work for the next iteration.
- * These concepts should help you decide on where to focus your efforts.
- * Can be related to product and/or process.
-
 Look into other ways to make our Chrome extension easier to download. Right now the extension is available in the Chrome Web store for free download. We will look for other ways for users to download the extension, such as having it directly available in our website or have it packaged with our webcam-mouse installation.
 
 Look for possible improvements on our Chrome extension. We will look for potential areas for improvement for our extension. The main idea we have currently is to add voice command, and potentially voice typing, to our extension. This would require a lot of research and work.
