@@ -62,11 +62,23 @@ For our Chrome extension, create a button that hides all other buttons. This giv
  * Refer/link to artifact(s) that show that a goal/task was met/completed.
  * If a goal/task was not part of the original iteration plan, please mention it.
 
+The chrome extension which created a UI containing buttons for zooming in, zooming out, reset zoom, and create new tab was completed. We can refer to the demo video we filmed to show this. 
+
+<Install extension>
+
+<Voice control>
+
+<Brainstorm ideas for chrome extension>
+
+Lastly, progress was made on both the website and the landing page (despite the fact that the team member in charge of the landing page didn't realize he had to do it). 
+
 #### Goals and/or tasks that were planned but not met/completed:
 
  * From most to least important.
  * For each goal/task, explain why it was not met/completed.      
    e.g. Did you change your mind, or did you just not get to it yet?
+
+<State what hasn't been completed>
 
 ## Meeting Highlights
 
@@ -75,6 +87,8 @@ Going into the next iteration, our main insights are:
 Look into other ways to make our Chrome extension easier to download. Right now the extension is available in the Chrome Web store for free download. We will look for other ways for users to download the extension, such as having it directly available in our website or have it packaged with our webcam-mouse installation.
 
 Look for possible improvements on our Chrome extension. We will look for potential areas for improvement for our extension. The main idea we have currently is to add voice command, and potentially voice typing, to our extension. This would require a lot of research and work.
+
+The website and landing page also need to be completely finished by the end of the next iteration. 
 
 
 
