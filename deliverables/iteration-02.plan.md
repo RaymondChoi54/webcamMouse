@@ -23,6 +23,8 @@ Create a Chrome extension that creates an UI for easier and more accurate naviga
 
 Create a Python application that allows for the user to control the mouse cursor with the webcamera. **It is important to note that this is not the focus of our product; but rather a tool to achieve the purpose of ease-of-navigation**. This will be done by Raymond and Timothy. This goal is around 50% completed as of the end of Iteration 1. This program is composed of two pieces - a python program to track the face, as well as a python program that can accept inputs to move the mouse cursor around the screen. **This program’s control mechanism is different from other webcam control software as this program treats the controlling mechanism as a Touchpoint rather than a Trackpad. (Again, not the main purpose of this project, but worth noting)**
 
+Create a website which provides the software to download, a video demo, and a mechanism for feedback. 
+
 #### Events
 
 Describe meetings (and other events) you are planning to have:
@@ -94,6 +96,8 @@ Look for ways to integrate voice control into our chrome extension. Ideally, the
 
 Brainstorm for more ideas for our chrome extension. Although not necessarily to be completed this iteration, there is a general consensus among the group members that the Chrome extension could use more features while maintaining its minimalistic form. Any new ideas are to be added to the Trello.
 
+Make significant progress on the new tab landing page and the website.
+
 #### Artifacts
 
 List/describe the artifacts you will produce in order to present your project idea.
@@ -107,5 +111,5 @@ Create a demo video that shows mouse control using facial features. This will be
 
 Create a chrome extension that creates a UI when browsing any webpage. This will take the form of buttons that overlay on top of the webpage allowing for multiple functionalities including zooming, creating new tabs, etc. It plays a **significant** role as it is **the main purpose of our project (and not on the webcam mouse control software)** 
 
-
+Create a website showcasing the project. It will include the following sections: introduction, about, product demo, download, feedback form, and meet-the-team 
 
