@@ -1,5 +1,9 @@
  ##LIMBSFREE GROUP 4
 
+Demo Video Link: https://drive.google.com/file/d/0BzsYVqmmDu70cE5TRXZSaHpFTkE/view
+
+Note that the video does not reflect the current state of our program.
+
 Trello Link: https://trello.com/b/MNGXdTQH
 
 ## Iteration 02 - Review & Retrospect
@@ -24,16 +28,8 @@ One of our members didn't realize he was supposed to implement a landing page fo
 
 Due to the difficulty and the lack of reliability in detecting blinks, we have ultimately decided to scrap the blink-detection function and to settle with holding of the head for 5 seconds to click. The problem was that the haar classifiers that detected blinking were not that great and would often fail 50% of the time; misfiring clicks. Due to the lack of time, Timothy and Raymond decided not to invest numerous hours into training the computer and instead focus their resources elsewhere. 
 
-** ADD 1 MORE
-
-
 
 #### Planned changes
-
-List any process-related changes you are planning to make (if there are any)
-
- * Ordered from most to least important.
- * Explain why you are making a change.
 
 For our Chrome extension, create a button that hides all other buttons. This gives the user the option to hide the other buttons if they please and solves the potential problem of our extension buttons covering up functions on the webpage. 
 
@@ -41,8 +37,6 @@ In addition to the hide All button, the team plans to incorperate back, forwards
 
 In terms of the webcam software, plans are put into place to incorperate a sentitivity menu so that the user can adjust how sensitive the mouse cursor is. This is due to the mixed criticism from many of our testers where some would say its too slow while some say that its just right. 
 
-
-**any changes on the extension team
 
 ## Product - Review
 
@@ -54,24 +48,17 @@ The webcam software now fully supports scrolling and clicking. It also has a cal
 
 The chrome extension is successfully published on the Chrome Extension store where users can download for free.
 
-***Voice control
-
-***Brainstorm ideas for chrome extension>
-
 Lastly, progress was made on both the website and the landing page (despite the fact that the team member in charge of the landing page didn't realize he had to do it). 
 
 #### Goals and/or tasks that were planned but not met/completed:
 
- * From most to least important.
- * For each goal/task, explain why it was not met/completed.      
-   e.g. Did you change your mind, or did you just not get to it yet?
    
 The webcam software still requires calibration on the current code it has. It has trouble detecting people with long hair covering their faces and is rather slow at moving the cursor around the screen. 
 
 Voice input is a function we will be trying to implement in the future for chrome extension.
 
 Installation of webcam software and the chrome extension will be combined for easier user experience.
-***State what hasn't been completed
+
 
 ## Meeting Highlights
 
