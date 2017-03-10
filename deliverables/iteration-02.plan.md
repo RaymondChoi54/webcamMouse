@@ -1,6 +1,6 @@
 # LIMBSFREE GROUP 4
 
-Demo-Video Link: https://drive.google.com/file/d/0BzsYVqmmDu70cE5TRXZSaHpFTkE/viewv
+Demo-Video Link: https://drive.google.com/file/d/0BzsYVqmmDu70cE5TRXZSaHpFTkE/view
 
 
  > _Note:_ This document is meant to be written during (or shortly after) your initial planning meeting.     
