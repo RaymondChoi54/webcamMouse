@@ -52,7 +52,7 @@ The chrome extension which created a UI containing buttons for zooming in, zoomi
 
 The webcam software now fully supports scrolling and clicking. It also has a calibration squence that lets the computer learn from the user. This is ran at the very beggining of the launch of the program. 
 
-***Install extension
+The chrome extension is successfully published on the Chrome Extension store where users can download for free.
 
 ***Voice control
 
@@ -68,6 +68,9 @@ Lastly, progress was made on both the website and the landing page (despite the 
    
 The webcam software still requires calibration on the current code it has. It has trouble detecting people with long hair covering their faces and is rather slow at moving the cursor around the screen. 
 
+Voice input is a function we will be trying to implement in the future for chrome extension.
+
+Installation of webcam software and the chrome extension will be combined for easier user experience.
 ***State what hasn't been completed
 
 ## Meeting Highlights
