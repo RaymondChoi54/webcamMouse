@@ -1,6 +1,7 @@
 # LIMBSFREE GROUP 4
 
 Demo-Video Link: https://drive.google.com/file/d/0BzsYVqmmDu70cE5TRXZSaHpFTkE/view
+Note that the video does not reflect the current state of our program.
 
 
  > _Note:_ This document is meant to be written during (or shortly after) your initial planning meeting.     
