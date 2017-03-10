@@ -1,25 +1,14 @@
  ##LIMBSFREE GROUP 4
 
- > _Note:_ This document is meant to be written during (or shortly after) your review meeting, which should happen fairly close to the due date.     
- > _Suggestion:_ Have your review meeting a day or two before the due date. This way you will have some time to go over (and edit) this document, and all team members should have a chance to make their contribution.
+Trello Link: https://trello.com/b/MNGXdTQH
 
 ## Iteration 02 - Review & Retrospect
 
- * When: FILL IN THE DATE WHEN YOU ACTUALLY HAD YOUR REVIEW MEETING
- * Where: PHYSICAL LOCATION AND/OR ONLINE
-
- Wednesday, March 8th 2017 at UC244
+ Wednesday, March 8th 2017 at UC244 (physically)
 
 ## Process - Reflection
 
 #### Decisions that turned out well
-
-List process-related (i.e. team organization) decisions that, in retrospect, turned out to be successful.
-
- * 2 - 4 decisions.
- * Ordered from most to least important.
- * Explain why (i.e. give a supporting argument) you consider a decision to be successful.
- * Feel free to refer/link to process artifact(s).
 
 Having a hackathon like event where the whole team met up for one day in bahen during reading week to work on the project. This was a very good idea because working together in person made communication extremely efficient. We completed a sizable chunk of the project during this "hackathon," and every member updated everyone else on their progress and their plan for the rest of the iteration (and got to try the software).
 
@@ -31,13 +20,13 @@ Lastly, from iteration 1 we realized our project could consist of more, so we ad
 
 #### Decisions that did not turn out as well as we hoped
 
-List process-related (i.e. team organization) decisions that, in retrospect, were not as successful as you thought they would be.
-
- * 2 - 4 decisions.
- * Ordered from most to least important.
- * Feel free to refer/link to process artifact(s).
-
 One of our members didn't realize he was supposed to implement a landing page for new tab, because we forgot to put it on the trello board. This miscommunication could have caused problems, but luckily another member reached out in time to remind him and it will be completed for the due date. The decision to use Trello has been extremely successful overall, but we need to be careful not to be over reliant on it.
+
+Due to the difficulty and the lack of reliability in detecting blinks, we have ultimately decided to scrap the blink-detection function and to settle with holding of the head for 5 seconds to click. The problem was that the haar classifiers that detected blinking were not that great and would often fail 50% of the time; misfiring clicks. Due to the lack of time, Timothy and Raymond decided not to invest numerous hours into training the computer and instead focus their resources elsewhere. 
+
+** ADD 1 MORE
+
+
 
 #### Planned changes
 
@@ -46,11 +35,12 @@ List any process-related changes you are planning to make (if there are any)
  * Ordered from most to least important.
  * Explain why you are making a change.
 
-For our Chrome extension, create a button that hides all other buttons. This gives the user the option to hide the other buttons if they please and solves the potential problem of our extension buttons covering up functions on the webpage.
+For our Chrome extension, create a button that hides all other buttons. This gives the user the option to hide the other buttons if they please and solves the potential problem of our extension buttons covering up functions on the webpage. 
 
-**Scrap the blinking in OPENCV
+In addition to the hide All button, the team plans to incorperate back, forwards, etc to the extension so that the user does not have to rely on the on-screen buttons; especially when they are hidden during full-screen mode. 
 
-**any changes on the webcam team
+In terms of the webcam software, plans are put into place to incorperate a sentitivity menu so that the user can adjust how sensitive the mouse cursor is. This is due to the mixed criticism from many of our testers where some would say its too slow while some say that its just right. 
+
 
 **any changes on the extension team
 
@@ -58,11 +48,9 @@ For our Chrome extension, create a button that hides all other buttons. This giv
 
 #### Goals and/or tasks that were met/completed:
 
- * From most to least important.
- * Refer/link to artifact(s) that show that a goal/task was met/completed.
- * If a goal/task was not part of the original iteration plan, please mention it.
-
 The chrome extension which created a UI containing buttons for zooming in, zooming out, reset zoom, and create new tab was completed. We can refer to the demo video we filmed to show this. 
+
+The webcam software now fully supports scrolling and clicking. It also has a calibration squence that lets the computer learn from the user. This is ran at the very beggining of the launch of the program. 
 
 ***Install extension
 
@@ -77,6 +65,8 @@ Lastly, progress was made on both the website and the landing page (despite the 
  * From most to least important.
  * For each goal/task, explain why it was not met/completed.      
    e.g. Did you change your mind, or did you just not get to it yet?
+   
+The webcam software still requires calibration on the current code it has. It has trouble detecting people with long hair covering their faces and is rather slow at moving the cursor around the screen. 
 
 ***State what hasn't been completed
 
