@@ -17,8 +17,8 @@ class MouseControl(object):
 		self.multiplier = multiplier
 		self.invert = invert
 		self.screen_width, self.screen_height = pyautogui.size()
-		self.start_time = time.time();
-		pyautogui.FAILSAFE = False;
+		self.start_time = time.time()
+		pyautogui.FAILSAFE = False
 		
 	def smart_mouse_move(self, x, y):
 		
