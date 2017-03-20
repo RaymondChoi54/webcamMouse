@@ -33,8 +33,8 @@ class MouseControl(object):
 			multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
 			multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 
-		x_displacement = math.fabs(x - self.center_x) 
-		y_displacement = math.fabs(y - self.center_y)
+		x_displacement = math.fabs(x - self.center_x) #How far the mouse moved in the x axis
+		y_displacement = math.fabs(y - self.center_y) #How far the mouse moved in the y axis
 
 		displacement = (x_displacement ** 2 + y_displacement ** 2) ** 0.5 #How far the mouse moved from the middle
 
