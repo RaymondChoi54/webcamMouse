@@ -8,14 +8,14 @@ class MouseControl(object):
 
 		self.webcam_x = webcam_x
 		self.webcam_y = webcam_y
-		self.center_x = center_x
+		self.center_x = center_x #Where the middle of the circle is
 		self.center_y = center_y
-		self.circ_raid = circ_raid / 3
+		self.circ_raid = (2 * circ_raid) / 3 #Have to pass 2/3 of the radius for the mouse to move
 		self.x_sensitivity = x_sensitivity
 		self.y_sensitivity = y_sensitivity
 		self.mouse_acc = mouse_acc
-		self.multiplier = multiplier
-		self.invert = invert
+		self.multiplier = multiplier #Mouse acceleration 
+		self.invert = invert #If it's inverted or not
 		self.screen_width, self.screen_height = pyautogui.size()
 		self.start_time = time.time()
 		pyautogui.FAILSAFE = False
@@ -40,7 +40,8 @@ class MouseControl(object):
 
 		if(self.invert):
 			invert_multi = 1
-
+		
+		#To scroll or click
 		if(time.time() - self.start_time > 5 and (current_y < 200 or current_y > self.screen_height - 200)):
 			if(current_y < 200):
 				pyautogui.click()
@@ -52,6 +53,7 @@ class MouseControl(object):
 			pyautogui.click()
 			self.start_time = time.time()
 		
+		#To move
 		if(displacement >= self.circ_raid):
 
 			self.start_time = time.time()
@@ -77,6 +79,13 @@ class MouseControl(object):
 
 	def mouse_loc(self):
 		return pyautogui.position()
+	
+	def update_sensitivity(self, x, y):
+		self.x_sensitivity = x
+		self.y_sensitivity = y
+	
+	def get_sensitivity(self):
+		return self.x_sensitivity, self.y_sensitivity
 
 	def click(self, type):
 		if(type == "left"):
