@@ -79,6 +79,13 @@ class MouseControl(object):
 
 	def mouse_loc(self):
 		return pyautogui.position()
+	
+	def update_sensitivity(self, x, y):
+		self.x_sensitivity = x
+		self.y_sensitivity = y
+	
+	def get_sensitivity(self):
+		return self.x_sensitivity, self.y_sensitivity
 
 	def click(self, type):
 		if(type == "left"):
