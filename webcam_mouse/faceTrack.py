@@ -21,6 +21,7 @@ sensitivityImg = cv2.imread('assets\pictures\sensitivity.png')
 nx, ny = 0, 0;
 maxX, maxY, minX, minY = None, None, None, None
 centerX, centerY = 300, 300
+sensitivity = 0.4
 
 # Before We Begin
 ctypes.windll.user32.MessageBoxA(0, "Please make sure that the webcam is facing the subject and that the volume is turned up", "Before we begin", 0)
@@ -68,7 +69,6 @@ while True:
 	elif ((time.time() - startTime) > 27 and (time.time() - startTime) < 48):
 		cv2.putText(frame,"Stage 3 Calibration -- Seconds Left: " + str((startTime + 48 - time.time())), (10,400), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
 		frame[0:0+sensitivityImg.shape[0], 0:0+sensitivityImg.shape[1]] = sensitivityImg
-		print(centerX)
 		cv2.rectangle(frame, (centerX, centerY), (centerX + 1, centerY + 1), (255, 255, 255), 1) # Draw a center dot
 		cv2.line(frame, ((centerX), 0), ((centerX), frameWidth), (255,255,255), 2)
 		cv2.line(frame, (0, (centerY)), (frameHeight, (centerY)), (255,255,255), 2)
@@ -120,7 +120,7 @@ while True:
 		if ((time.time() - startTime) > 48):
 			# Create Mouse Control if not created
 			if not mouseControl:
-				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), 0.4, 0.4)
+				mouseControl = MouseControl(frame.shape[1], frame.shape[0], centerX, centerY, min((maxX - centerX), (maxY - centerY), (centerY - minY), (centerX - minX)), sensitivity, sensitivity)
 			
 			thr = threading.Thread(target=mouseControl.smart_mouse_move, args=(nx, ny), kwargs={})
 			thr.start()
