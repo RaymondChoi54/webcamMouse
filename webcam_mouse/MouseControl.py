@@ -22,21 +22,21 @@ class MouseControl(object):
 		
 	def smart_mouse_move(self, x, y):
 		
-		move_x = 0
-		move_y = 0
+		move_x = 0 #x displacement of the mouse
+		move_y = 0 #y displacement of the mouse
 		multiply_x = 1
 		multiply_y = 1
 		invert_multi = -1
-		current_x, current_y = pyautogui.position()
+		current_x, current_y = pyautogui.position() #Current position of the mouse
 
 		if(self.mouse_acc):
 			multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
 			multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 
-		x_displacement = math.fabs(x - self.center_x) 
-		y_displacement = math.fabs(y - self.center_y)
+		x_displacement = math.fabs(x - self.center_x) #How far the mouse moved in the x axis
+		y_displacement = math.fabs(y - self.center_y) #How far the mouse moved in the y axis
 
-		displacement = (x_displacement ** 2 + y_displacement ** 2) ** 0.5
+		displacement = (x_displacement ** 2 + y_displacement ** 2) ** 0.5 #How far the mouse moved from the middle
 
 		if(self.invert):
 			invert_multi = 1
