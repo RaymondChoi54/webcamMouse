@@ -22,6 +22,7 @@ video_capture = cv2.VideoCapture(0)
 
 mouseInstructionImg = cv2.imread('assets\pictures\moveFace.png')
 clickInstructionImg = cv2.imread('assets\pictures\holdClick.png')
+sensitivityImg = cv2.imread('assets\pictures\sensitivity.png')
 nx, ny = 0, 0;
 maxX, maxY, minX, minY = None, None, None, None
 centerX, centerY = None, None
