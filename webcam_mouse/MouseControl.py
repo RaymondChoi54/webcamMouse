@@ -20,6 +20,15 @@ class MouseControl(object):
 		self.start_time = time.time()
 		pyautogui.FAILSAFE = False
 		
+	def set_invertion(self, invert):
+		this.invert = invert
+		
+	def set_multiplier(self, multiplier):
+		this.multiplier = multiplier
+		
+	def set_mouse_acc(self, mouse_acc):
+		this.mouse_acc = mouse_acc
+		
 	def smart_mouse_move(self, x, y):
 		
 		move_x = 0 #x displacement of the mouse
