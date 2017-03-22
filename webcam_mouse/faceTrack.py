@@ -106,6 +106,15 @@ while True:
 			# Obtain center
 			centerX = (maxX + minX)/2
 			centerY = (maxY + minY)/2
+		elif ((time.time() - startTime) > 36 and (time.time() - startTime) < 48):
+			if ((x + (w/2)) > centerX and (y + (h/2)) > centerY):
+				sensitivity = 0.4
+			elif ((x + (w/2)) <= centerX and (y + (h/2)) <= centerY):
+				sensitivity = 0.1
+			elif ((x + (w/2)) > centerX and (y + (h/2)) <= centerY):
+				sensitivity = 0.2
+			elif ((x + (w/2)) <= centerX and (y + (h/2)) > centerY):
+				sensitivity = 0.3
 
 		# Draw crosshair on person
 		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 1) # Draw a rectangle around the faces	
