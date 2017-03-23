@@ -9,6 +9,10 @@
     "css": ["add-toolbar.css"],
     "js": ["add-toolbar.js"],
     "matches": ["<all_urls>"]
+  },
+  {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["youtube.js"]
   }]
 
 }
