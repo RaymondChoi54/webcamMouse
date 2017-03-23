@@ -23,11 +23,20 @@ class MouseControl(object):
 	def set_invertion(self, invert):
 		this.invert = invert
 		
+	def get_invertion(self):
+		return this.invert
+		
 	def set_multiplier(self, multiplier):
 		this.multiplier = multiplier
 		
+	def get_multiplier(self):
+		return this.multiplier
+		
 	def set_mouse_acc(self, mouse_acc):
 		this.mouse_acc = mouse_acc
+		
+	def get_mouse_acc(self):
+		return this.mouse_acc
 		
 	def smart_mouse_move(self, x, y):
 		
