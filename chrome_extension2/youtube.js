@@ -77,10 +77,34 @@ btn5.style.zIndex="100";
 var t5 = document.createTextNode("Go Back");
 btn5.appendChild(t5);
 btn5.onclick = function(){
-	window.history.back();
+  document.getElementsByTagName("video")[0].play();
 };
 
 iframe.appendChild(btn5);
+
+var btn7 = document.createElement("BUTTON");
+btn7.setAttribute("id","acc-btn-7");
+btn7.setAttribute("class","btn btn-default btn-circle btn-xl");
+btn7.setAttribute("style", "	font-size:20px;font-family: inherit;border: 1px solid transparent;color: #FFF;background-color: #0095ff;border-color: #07c;box-shadow: inset 0 1px 0 #66bfff;position: fixed;right: 0; top: 50%;");
+btn7.style.zIndex="100";
+var t7 = document.createTextNode("Play");
+btn7.appendChild(t7);
+btn7.onclick = function(){
+  document.getElementsByTagName("video")[0].play();
+};
+iframe.appendChild(btn7);
+
+var btn8 = document.createElement("BUTTON");
+btn8.setAttribute("id","acc-btn-8");
+btn8.setAttribute("class","btn btn-default btn-circle btn-xl");
+btn8.setAttribute("style", "	font-size:20px;font-family: inherit;border: 1px solid transparent;color: #FFF;background-color: #0095ff;border-color: #07c;box-shadow: inset 0 1px 0 #66bfff;position: fixed;left: 0; top: 50%;");
+btn8.style.zIndex="100";
+var t8 = document.createTextNode("Pause");
+btn8.appendChild(t8);
+btn8.onclick = function(){
+  document.getElementsByTagName("video")[0].pause();
+};
+iframe.appendChild(btn8);
 
 var btn6 = document.createElement("BUTTON");
 btn6.setAttribute("id","acc-btn-6");
@@ -92,9 +116,13 @@ btn6.onclick = function(){
 	if(sw==0){
 		sw=1;
 		document.getElementById("acc-btn-6").innerHTML="Show";
-		for(var i=1;i<=5;i++){
-			document.getElementById("acc-btn-"+i).remove();
-		}
+    document.getElementById("acc-btn-1").remove();
+    document.getElementById("acc-btn-2").remove();
+    document.getElementById("acc-btn-3").remove();
+    document.getElementById("acc-btn-4").remove();
+    document.getElementById("acc-btn-5").remove();
+    document.getElementById("acc-btn-7").remove();
+    document.getElementById("acc-btn-8").remove();
 
 	}
 	else{
@@ -105,10 +133,15 @@ btn6.onclick = function(){
 		iframe.appendChild(btn3);
 		iframe.appendChild(btn4);
 		iframe.appendChild(btn5);
+    iframe.appendChild(btn7);
+    iframe.appendChild(btn8);
 	}
 };
 
+
 iframe.appendChild(btn6);
+
+
 
 // Etc. Add your own styles if you want to
 document.documentElement.appendChild(iframe);
