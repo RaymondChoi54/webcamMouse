@@ -7,6 +7,8 @@
 
 ## Iteration 03 - Review & Retrospect
 
+Link of the video for iteration 3: https://drive.google.com/file/d/0BzsYVqmmDu70Q2xjMVdkNkFpQWc/view?usp=sharing
+
  * When: Thursday, March 23th 2017
  * Where: UC244
 
