@@ -7,8 +7,6 @@
 
 ## Process
 
-(Optional:) Quick introduction
-
 #### Changes from previous iteration
 
 List the most significant changes you made to your process (if any).
@@ -21,7 +19,7 @@ List the most significant changes you made to your process (if any).
  > *Note:* If you are not making any changes to your process, it means that you are happy with all of the decisions you made in the previous iterations.
  > In this case, list what you consider to be the most significant process decisions your team made. For each decision, explain why you consider it successful, and what success metric you are using (or could use) to assert that the decision is successful.
 
-We are happy with continuing our current process. It has been fairly effective. The most significant process-related decision we made was using a Trello Scrum/Kanban style todo list. This allows for the prioritization and tracking of the progress of each task. It also allows for members to input new ideas into the board as well as find out who is working on what task quickly. We feel this has been successful as it keeps everyone on the same page. Since we have this to keep track of what everyone is working on, we can easily keep in touch with each other and find out the progress of everyone on the team. In terms of the success metric - we can point to the fact that we achieved our goals for the last iteration (***rohan’s note: seems to be the case from my end, if it is not - please let me know and I will edit this out).
+We are happy with continuing our current process. It has been fairly effective. The most significant process-related decision we made was using a Trello Scrum/Kanban style todo list. This allows for the prioritization and tracking of the progress of each task. It also allows for members to input new ideas into the board as well as find out who is working on what task quickly. We feel this has been successful as it keeps everyone on the same page. Since we have this to keep track of what everyone is working on, we can easily keep in touch with each other and find out the progress of everyone on the team. In terms of the success metric - we can point to the fact that we achieved our goals for the last iteration 
 
 We did make a minor change regarding the tools we used - we started using Facebook messenger as our method of communication. We believe it will facilitate more productive communication than slack. As messenger is something that is checked more often, it allowed for more frequent communication. Overall, messenger will allow us to keep track how the progress on each task much easier and keep everyone on the same frequency. We will keep track of whether or not switching to messenger was successful or not in two ways. First, by comparing the number of commits in the repository after the change to before the change. Secondly, by tracking the total number comments made in messenger vs slack.
 
@@ -47,7 +45,7 @@ Describe meetings (and other events) you are planning to have:
  * What's the **purpose** of each meeting?
  * Other events could be coding sessions, code reviews, quick weekly sync' meeting online, etc.
 
-We will have three in person meetings. The first is today, March 17th, in order to plan this iteration and finish this document. The second is the session to make the video (**we’ll add more to this as we  know more). Shortly before the iteration review, we will meet over Skype to have a sync meeting to determine if everybody is caught up and pull everything together if needed. Finally, we will meet in person to finalize the iteration review doc 
+We will have three in person meetings. The first is today, March 17th, in order to plan this iteration and finish this document. The second is the session to make the video. Shortly before the iteration review, we will meet over Skype to have a sync meeting to determine if everybody is caught up and pull everything together if needed. Finally, we will meet in person to finalize the iteration review doc 
 
 #### Artifacts
 
@@ -76,8 +74,6 @@ Essentially, we want to understand how your team members share a codebase and av
 For example, "we use pull-requests" is not a precise statement since it leaves too many open questions - Pull-requests from where to where? Who reviews the pull-requests? Who is responsible for merging them? etc.
  * If applicable, specify any naming conventions or standards you decide to adopt.
  * Don't forget to **explain why** you chose this workflow.
-
-***again straight copied, since this didn’t change
 
 Each team member has a fork of the project. Every time before working on the project, the team member would create a pull request from the group-04 main repository to his own fork to get all the latest updates. After working on the project and committing code to his own fork, the team member would create a pull-request to merge his code to the main repository. Another team member, usually the person working on the same section of the project, would review the pull request and merge it if there are no conflicts. Often we would explain to each other the sections we are working on so everyone is on the same track. Group members working on the same area of code frequently communicate with one another, either in person or online. We choose this workflow because
 
