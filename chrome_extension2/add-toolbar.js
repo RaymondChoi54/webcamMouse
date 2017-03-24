@@ -5,6 +5,7 @@ document.documentElement.style.zoom = base_zoom;
 var height = '120px';
 var iframe = document.createElement('div');
 var sw=0;
+var link = window.location.href;
 // iframe.src = chrome.extension.getURL('toolbar.html');
 /*iframe.style.height = height;
 iframe.style.width = '100%';
@@ -13,6 +14,7 @@ iframe.style.top = '0';
 iframe.style.left = '0';
 iframe.style.zIndex = '938089'; // Some high value
 iframe.background = 'yellow';*/
+
 
 var btn = document.createElement("BUTTON");
 btn.setAttribute("id","acc-btn-1");

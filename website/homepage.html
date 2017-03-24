@@ -30,12 +30,15 @@
                         <li><a href="#section3">Demo</a></li>
                         <li><a href="#section4">Download</a></li>
                         <li><a href="#section5">Feedback</a></li>
-                        <li><a href="#section6">Meet The Team</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" width="640" height="480" src="demo_video_1.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <div id="section1">
         <h3>Introduction</h3>
@@ -51,18 +54,36 @@
 
     <div id="section3">
         <h3>Demo</h3>
+        <p>We created a series of demo videos demonstrating our product</p>
+        <p><a href="https://drive.google.com/file/d/0BzsYVqmmDu70cE5TRXZSaHpFTkE/view">Here</a> is Demo Video 1 (Currently displayed at the top of the page)</p>
+        <p><a>Here</a> is Demo Video 2</p>
     </div>
 
     <div id="section4">
         <h3>Download</h3>
+        <p>Right now we don't have an installer, but you can get in touch with us and we'll help you out</p>
+
     </div>
 
     <div id="section5">
         <h3>Feedback</h3>
-    </div>
 
-    <div id="section6">
-        <h3>Meet The Team</h3>
+        <p>We are always open to feedback and would love to get your thoughts on our product. Contact us using the form below.</p>
+
+         <form action="/submit" method="post">
+
+            First name:
+            <input type="text" name="firstname"><br>
+            Last name:
+            <input type="text" name="lastname"><br>
+            Email:
+            <input type="email" name="email"><br>
+            Comments:
+            <input type="text" name="comments"><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
     </div>
 
 </body>

@@ -8,39 +8,58 @@ class MouseControl(object):
 
 		self.webcam_x = webcam_x
 		self.webcam_y = webcam_y
-		self.center_x = center_x
+		self.center_x = center_x #Where the middle of the circle is
 		self.center_y = center_y
-		self.circ_raid = circ_raid / 3
+		self.circ_raid = (2 * circ_raid) / 3 #Have to pass 2/3 of the radius for the mouse to move
 		self.x_sensitivity = x_sensitivity
 		self.y_sensitivity = y_sensitivity
 		self.mouse_acc = mouse_acc
-		self.multiplier = multiplier
-		self.invert = invert
+		self.multiplier = multiplier #Mouse acceleration 
+		self.invert = invert #If it's inverted or not
 		self.screen_width, self.screen_height = pyautogui.size()
-		self.start_time = time.time();
-		pyautogui.FAILSAFE = False;
+		self.start_time = time.time()
+		pyautogui.FAILSAFE = False
+		
+	def set_invertion(self, invert):
+		this.invert = invert
+		
+	def get_invertion(self):
+		return this.invert
+		
+	def set_multiplier(self, multiplier):
+		this.multiplier = multiplier
+		
+	def get_multiplier(self):
+		return this.multiplier
+		
+	def set_mouse_acc(self, mouse_acc):
+		this.mouse_acc = mouse_acc
+		
+	def get_mouse_acc(self):
+		return this.mouse_acc
 		
 	def smart_mouse_move(self, x, y):
 		
-		move_x = 0
-		move_y = 0
+		move_x = 0 #x displacement of the mouse
+		move_y = 0 #y displacement of the mouse
 		multiply_x = 1
 		multiply_y = 1
 		invert_multi = -1
-		current_x, current_y = pyautogui.position()
+		current_x, current_y = pyautogui.position() #Current position of the mouse
 
 		if(self.mouse_acc):
 			multiply_x = multiplier ** (math.fabs(x - self.center_x) / self.circ_raid)
 			multiply_y = multiplier ** (math.fabs(y - self.center_y) / self.circ_raid)
 
-		x_displacement = math.fabs(x - self.center_x) 
-		y_displacement = math.fabs(y - self.center_y)
+		x_displacement = math.fabs(x - self.center_x) #How far the mouse moved in the x axis
+		y_displacement = math.fabs(y - self.center_y) #How far the mouse moved in the y axis
 
-		displacement = (x_displacement ** 2 + y_displacement ** 2) ** 0.5
+		displacement = (x_displacement ** 2 + y_displacement ** 2) ** 0.5 #How far the mouse moved from the middle
 
 		if(self.invert):
 			invert_multi = 1
-
+		
+		#To scroll or click
 		if(time.time() - self.start_time > 5 and (current_y < 200 or current_y > self.screen_height - 200)):
 			if(current_y < 200):
 				pyautogui.click()
@@ -52,19 +71,20 @@ class MouseControl(object):
 			pyautogui.click()
 			self.start_time = time.time()
 		
+		#To move
 		if(displacement >= self.circ_raid):
 
 			self.start_time = time.time()
 			
 			if(0 > x - self.center_x):
-				current_x = x_displacement / self.x_sensitivity * multiply_x * invert_multi + current_x
+				current_x = x_displacement * self.x_sensitivity * multiply_x * invert_multi + current_x
 			else:
-				current_x = (- x_displacement / self.x_sensitivity * multiply_x * invert_multi) + current_x
+				current_x = (- x_displacement * self.x_sensitivity * multiply_x * invert_multi) + current_x
 				
 			if(0 > y - self.center_y):
-				current_y = y_displacement / self.y_sensitivity * multiply_y * invert_multi + current_y
+				current_y = y_displacement * self.y_sensitivity * multiply_y * invert_multi + current_y
 			else:
-				current_y = (- y_displacement / self.y_sensitivity * multiply_y * invert_multi) + current_y
+				current_y = (- y_displacement * self.y_sensitivity * multiply_y * invert_multi) + current_y
 
 			pyautogui.moveTo(current_x, current_y, duration=0)
 
@@ -77,6 +97,13 @@ class MouseControl(object):
 
 	def mouse_loc(self):
 		return pyautogui.position()
+	
+	def update_sensitivity(self, x, y):
+		self.x_sensitivity = x
+		self.y_sensitivity = y
+	
+	def get_sensitivity(self):
+		return self.x_sensitivity, self.y_sensitivity
 
 	def click(self, type):
 		if(type == "left"):
