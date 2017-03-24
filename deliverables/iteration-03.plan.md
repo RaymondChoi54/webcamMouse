@@ -2,6 +2,8 @@
 
 ## Iteration 3
 
+Link of video for iteration 3: https://drive.google.com/file/d/0BzsYVqmmDu70Q2xjMVdkNkFpQWc/view?usp=sharing
+
  * Start date: Friday, March 17th, 2017
  * End date: Thursday, March 23rd, 2017
 

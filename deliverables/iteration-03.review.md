@@ -7,6 +7,8 @@
 
 ## Iteration 03 - Review & Retrospect
 
+Link of the video for iteration 3: https://drive.google.com/file/d/0BzsYVqmmDu70Q2xjMVdkNkFpQWc/view?usp=sharing
+
  * When: Thursday, March 23th 2017
  * Where: UC244
 
@@ -58,6 +60,8 @@ There will be no changes.
 
 ***rohan’s note: fill in what you did here
 
+Completed a back button that takes user to the previous page. Added buttons for youtube to pause and play videos.
+
 Completed the website.
 
 Sensitivity adjustment has been completed. Now the user is able to select how sensitive they want the mouse to be since the webcam software operates in a TrackPoint-style rather than TrackPad-style. 
@@ -69,6 +73,8 @@ Sensitivity adjustment has been completed. Now the user is able to select how se
    e.g. Did you change your mind, or did you just not get to it yet?
 
 ***rohan’s note: add what you did here, if there was anything. James I believe you found Voice input hard so put that here.
+
+We thought of implementing voice input to our chrome extension. However, we determined that it isn't that useful since the facial tracking feature is working really well. Also, we discovered that we can utilize the google search voice control, which integrates really well with our extension.
 
 The Windows installer was not made using InstallCreator. Instead, an alternative was used where the user would run the install batch file to install the program. Then they would run the "run" batch file to launch the program. 
 
