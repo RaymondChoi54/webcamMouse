@@ -60,6 +60,8 @@ There will be no changes.
 
 Completed the website.
 
+Sensitivity adjustment has been completed. Now the user is able to select how sensitive they want the mouse to be since the webcam software operates in a TrackPoint-style rather than TrackPad-style. 
+
 #### Goals and/or tasks that were planned but not met/completed:
 
  * From most to least important.
@@ -67,6 +69,10 @@ Completed the website.
    e.g. Did you change your mind, or did you just not get to it yet?
 
 ***rohan’s note: add what you did here, if there was anything. James I believe you found Voice input hard so put that here.
+
+The Windows installer was not made using InstallCreator. Instead, an alternative was used where the user would run the install batch file to install the program. Then they would run the "run" batch file to launch the program. 
+
+Sensitivity is not saved into a file since the sentitivty selection is integrated with the calibration process of the webcam software and would be launched every time the calibration process is launched. 
 
 ## Meeting Highlights
 
