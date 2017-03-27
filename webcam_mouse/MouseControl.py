@@ -18,6 +18,7 @@ class MouseControl(object):
 		self.invert = invert #If it's inverted or not
 		self.screen_width, self.screen_height = pyautogui.size()
 		self.start_time = time.time()
+		self.allow_click = True
 		pyautogui.FAILSAFE = False
 		
 	def set_invertion(self, invert):
@@ -61,11 +62,12 @@ class MouseControl(object):
 		
 		#To scroll or click
 		if(time.time() - self.start_time > 5 and (current_y < 200 or current_y > self.screen_height - 200)):
-			if(current_y < 200):
+			if(allow_click):
 				pyautogui.click()
+				self.allow_click = false
+			if(current_y < 200):
 				pyautogui.scroll(30, x = self.screen_width / 2, y = self.screen_height / 2)
 			elif(current_y > self.screen_height - 200):
-				pyautogui.click()
 				pyautogui.scroll(-30, x = self.screen_width / 2, y = self.screen_height / 2)
 		elif(time.time() - self.start_time > 5):
 			pyautogui.click()
@@ -73,8 +75,9 @@ class MouseControl(object):
 		
 		#To move
 		if(displacement >= self.circ_raid):
-
+				
 			self.start_time = time.time()
+			self.allow_click = True
 			
 			if(0 > x - self.center_x):
 				current_x = x_displacement * self.x_sensitivity * multiply_x * invert_multi + current_x
