@@ -45,7 +45,7 @@
     </div>
     <div class="w3-row">
       <button class="w3-col m3 w3-black w3-center" id="bY" value="y">Y</button>
-      <div class="w3-col m6 w3-dark-grey w3-center" ><p>KEYBOARD</p></div>
+      <button class="w3-col m6 w3-dark-grey w3-center" id="delete">DELETE</button>
       <button class="w3-col m3 w3-black w3-center" id="bZ" value="z">Z</button>
     </div>
     <div id="but1">
@@ -60,7 +60,7 @@
     <div id="but4">
       <button id="temp2" class="button4 w3-btn-block" onclick="function2();" >New Link</button>
     </div>
-  </div>
+   </div>
 
 </body>
 
@@ -76,6 +76,14 @@ function function1(){
   var butt=document.createElement("button");
   butt.setAttribute("id","submit1");
   butt.innerHTML="submit";
+  document.getElementById('delete').addEventListener('click', function(){
+  
+          document.getElementById('input1').value = document.getElementById('input1').value.slice(0,document.getElementById('input1').value.length-1);
+          document.getElementById('inputname1').value = document.getElementById('inputname1').value.slice(0,document.getElementById('inputname1').value.length-1);
+      
+        //document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+        //console.log(document.getElementById('input1').value);
+  });
   document.getElementById('bWWW').addEventListener('click', function(){
   
           document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bWWW').value;
@@ -305,6 +313,14 @@ function function2(){
   var butt=document.createElement("button");
   butt.setAttribute("id","submit2");
   butt.innerHTML="submit";
+  document.getElementById('delete').addEventListener('click', function(){
+  
+          document.getElementById('input2').value = document.getElementById('input2').value.slice(0,(document.getElementById('input2').value.length-1));
+          document.getElementById('inputname2').value = document.getElementById('inputname2').value.slice(0,(document.getElementById('inputname2').value.length-1));
+      
+        //document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+        //console.log(document.getElementById('input1').value);
+  });
   
   document.getElementById('bWWW').addEventListener('click', function(){
   
@@ -512,29 +528,4 @@ function function2(){
 }
 </script>
 <script type="text/javascript" src="landing.js"></script>
-<script type='text/javascript' >
-/* (c)2006 Stephen Chalmers
- * 
- * Appends a 'hasFocus' flag to all text/textarea form
- * elements.
- *
- 
-Insert this script anywhere below the last form in the document.
 
-To read the current focus state of a specified element, use:
-
-if( document.forms.myForm.myElement.hasFocus )
- ...
-
-***/
-
-for(var i=0, df=document.forms, len=df.length; i<len; i++)
- for(j=0, els=df[i].elements; j<els.length; j++)
-  if( /^text/.test( els[j].type ) )
-  {
-   els[j].hasFocus=false;
-   els[j].onfocus=function(){this.hasFocus=true;};
-   els[j].onblur =function(){this.hasFocus=false;};
-  }
-
-</script>
