@@ -5,6 +5,7 @@ document.documentElement.style.zoom = base_zoom;
 var height = '120px';
 var iframe = document.createElement('div');
 var sw=0;
+var link = window.location.href;
 // iframe.src = chrome.extension.getURL('toolbar.html');
 /*iframe.style.height = height;
 iframe.style.width = '100%';
@@ -14,6 +15,7 @@ iframe.style.left = '0';
 iframe.style.zIndex = '938089'; // Some high value
 iframe.background = 'yellow';*/
 
+
 var btn = document.createElement("BUTTON");
 btn.setAttribute("id","acc-btn-1");
 btn.setAttribute("class","btn btn-default btn-circle btn-xl");
@@ -21,7 +23,7 @@ btn.setAttribute("style", "	font-size:20px;font-family: inherit;border: 1px soli
 btn.style.zIndex="100";
 var t = document.createTextNode("NEW TAB");
 btn.appendChild(t);
-btn.onclick = function(){window.open('http://www.google.com', '_blank');};
+btn.onclick = function(){window.open('http://localhost:3000/', '_blank');};
 
 iframe.appendChild(btn);
 

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="landing.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <div class="bodyContainer">
+    <div id="but1">
+      <button class="button1 w3-btn-block" onclick="location.href='http://google.com';">Google</button>
+    </div>
+    <div id="but2">
+      <button class="button2 w3-btn-block" onclick="location.href='http://youtube.com';" >YouTube</button>
+    </div>
+    <div id="but3">
+      <button id="temp1" class="button3 w3-btn-block" onclick="function1();" >New Link</button>
+    </div>
+    <div id="but4">
+      <button id="temp2" class="button4 w3-btn-block" onclick="function2();" >New Link</button>
+    </div>
+  </div>
+
+</body>
+
+<script>
+function function1(){
+  document.getElementById("but3").removeChild(document.getElementById("temp1"));
+  var ele1 = document.createElement("input");
+  ele1.setAttribute("id","input1");
+  ele1.setAttribute("placeholder","Url Link");
+  var ele2 = document.createElement("input");
+  ele2.setAttribute("id","inputname1");
+  ele2.setAttribute("placeholder","name");
+  var butt=document.createElement("button");
+  butt.setAttribute("id","submit1");
+  butt.innerHTML="submit";
+  butt.onclick=function(){
+    var link=$("#input1").val();
+    link="http://"+link;
+    var name=$("#inputname1").val();
+    jQuery.ajax({
+      url: "/link?link="+link+"&name="+name,
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      success: function(response) {
+    }
+  });
+    document.getElementById("but3").removeChild(document.getElementById("input1"));
+    document.getElementById("but3").removeChild(document.getElementById("inputname1"));
+    document.getElementById("but3").removeChild(document.getElementById("submit1"));
+    var tbutt=document.createElement("button");
+    tbutt.setAttribute("class","button3 w3-btn-block");
+    tbutt.innerHTML=name;
+    tbutt.onclick=function(){
+      location.href=link;
+
+  };
+    document.getElementById("but3").appendChild(tbutt);
+  };
+  document.getElementById("but3").appendChild(ele1);
+  document.getElementById("but3").appendChild(ele2);
+  document.getElementById("but3").appendChild(butt);
+
+
+}
+
+function function2(){
+  document.getElementById("but4").removeChild(document.getElementById("temp2"));
+  var ele1 = document.createElement("input");
+  ele1.setAttribute("id","input2");
+  ele1.setAttribute("placeholder","Url Link");
+  var ele2 = document.createElement("input");
+  ele2.setAttribute("id","inputname2");
+  ele2.setAttribute("placeholder","name");
+  var butt=document.createElement("button");
+  butt.setAttribute("id","submit2");
+  butt.innerHTML="submit";
+  butt.onclick=function(){
+    var link=$("#input2").val();
+    link="http://"+link;
+    var name=$("#inputname2").val();
+    jQuery.ajax({
+      url: "/link?link="+link+"&name="+name,
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      success: function(response) {
+    }
+  });
+    document.getElementById("but4").removeChild(document.getElementById("input2"));
+    document.getElementById("but4").removeChild(document.getElementById("inputname2"));
+    document.getElementById("but4").removeChild(document.getElementById("submit2"));
+    var tbutt=document.createElement("button");
+    tbutt.setAttribute("class","button4 w3-btn-block");
+    tbutt.innerHTML=name;
+    tbutt.onclick=function(){
+      location.href=link;
+
+  };
+    document.getElementById("but4").appendChild(tbutt);
+  };
+  document.getElementById("but4").appendChild(ele1);
+  document.getElementById("but4").appendChild(ele2);
+  document.getElementById("but4").appendChild(butt);
+
+
+}
+</script>
+<script type="text/javascript" src="landing.js"></script>
