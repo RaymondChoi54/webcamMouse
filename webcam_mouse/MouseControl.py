@@ -64,7 +64,7 @@ class MouseControl(object):
 		if(time.time() - self.start_time > 5 and (current_y < 200 or current_y > self.screen_height - 200)):
 			if(self.allow_click):
 				pyautogui.click()
-				self.allow_click = false
+				self.allow_click = False
 			if(current_y < 200):
 				pyautogui.scroll(30, x = self.screen_width / 2, y = self.screen_height / 2)
 			elif(current_y > self.screen_height - 200):
