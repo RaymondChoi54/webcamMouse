@@ -23,7 +23,7 @@ btn.setAttribute("style", "	font-size:20px;font-family: inherit;border: 1px soli
 btn.style.zIndex="100";
 var t = document.createTextNode("NEW TAB");
 btn.appendChild(t);
-btn.onclick = function(){window.open('http://www.google.com', '_blank');};
+btn.onclick = function(){window.open('http://localhost:3000/', '_blank');};
 
 iframe.appendChild(btn);
 
