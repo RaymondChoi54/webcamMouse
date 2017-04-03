@@ -10,6 +10,16 @@ html, body
  height: 100%;
 }
 
+.button00 {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    /*padding: 15px 32px;*/
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+}
+
 .button1 {
     background-color: #4CAF50; /* Green */
     border: none;

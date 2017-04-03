@@ -13,6 +13,41 @@
 <body>
 
   <div class="bodyContainer">
+    <div class="w3-row">
+      <button class="w3-col s6 w3-black w3-center" id="bWWW" value="www.">www.</button>
+      <button class="w3-col s6 w3-black w3-center" id="bCOM" value=".com">.com</button>
+    </div>
+    <div class="w3-row">
+      <button class="w3-col m2 w3-black w3-center" id="bA" value="a">A</button>
+      <button class="w3-col m2 w3-black w3-center" id="bB" value="b">B</button>
+      <button class="w3-col m2 w3-black w3-center" id="bC" value="c">C</button>
+      <button class="w3-col m2 w3-black w3-center" id="bD" value="d">D</button>
+      <button class="w3-col m2 w3-black w3-center" id="bE" value="e">E</button>
+      <button class="w3-col m2 w3-black w3-center" id="bF" value="f">F</button>
+      <button class="w3-col m2 w3-black w3-center" id="bG" value="g">G</button>
+      <button class="w3-col m2 w3-black w3-center" id="bH" value="h">H</button>
+      <button class="w3-col m2 w3-black w3-center" id="bI" value="i">I</button>
+      <button class="w3-col m2 w3-black w3-center" id="bJ" value="j">J</button>
+      <button class="w3-col m2 w3-black w3-center" id="bK" value="k">K</button>
+      <button class="w3-col m2 w3-black w3-center" id="bL" value="l">L</button>
+      <button class="w3-col m2 w3-black w3-center" id="bM" value="m">M</button>
+      <button class="w3-col m2 w3-black w3-center" id="bN" value="n">N</button>
+      <button class="w3-col m2 w3-black w3-center" id="bO" value="o">O</button>
+      <button class="w3-col m2 w3-black w3-center" id="bP" value="p">P</button>
+      <button class="w3-col m2 w3-black w3-center" id="bQ" value="q">Q</button>
+      <button class="w3-col m2 w3-black w3-center" id="bR" value="r">R</button>
+      <button class="w3-col m2 w3-black w3-center" id="bS" value="s">S</button>
+      <button class="w3-col m2 w3-black w3-center" id="bT" value="t">T</button>
+      <button class="w3-col m2 w3-black w3-center" id="bU" value="u">U</button>
+      <button class="w3-col m2 w3-black w3-center" id="bV" value="v">V</button>
+      <button class="w3-col m2 w3-black w3-center" id="bW" value="w">W</button>
+      <button class="w3-col m2 w3-black w3-center" id="bX" value="x">X</button>
+    </div>
+    <div class="w3-row">
+      <button class="w3-col m3 w3-black w3-center" id="bY" value="y">Y</button>
+      <div class="w3-col m6 w3-dark-grey w3-center" ><p>KEYBOARD</p></div>
+      <button class="w3-col m3 w3-black w3-center" id="bZ" value="z">Z</button>
+    </div>
     <div id="but1">
       <button class="button1 w3-btn-block" onclick="location.href='http://google.com';">Google</button>
     </div>
@@ -41,6 +76,180 @@ function function1(){
   var butt=document.createElement("button");
   butt.setAttribute("id","submit1");
   butt.innerHTML="submit";
+  document.getElementById('bWWW').addEventListener('click', function(){
+  
+          document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bWWW').value;
+          document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bWWW').value;
+      
+        //document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bCOM').addEventListener('click', function(){
+  
+          document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bCOM').value;
+          document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bCOM').value;
+      
+        //document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bA').addEventListener('click', function(){
+  
+          document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+          document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bA').value;
+      
+        //document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bB').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bB').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bB').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bC').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bC').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bC').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bD').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bD').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bD').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bE').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bE').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bE').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bF').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bF').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bF').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bG').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bG').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bG').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bH').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bH').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bH').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bI').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bI').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bI').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bJ').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bJ').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bJ').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bK').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bK').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bK').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bL').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bL').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bL').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bM').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bM').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bM').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bN').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bN').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bN').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bO').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bO').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bO').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bP').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bP').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bP').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bQ').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bQ').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bQ').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bR').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bR').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bR').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bS').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bS').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bS').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bT').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bT').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bT').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bU').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bU').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bU').value;
+        console.log(document.getElementById('input1').value);
+  });
+   document.getElementById('bV').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bV').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bV').value;
+        console.log(document.getElementById('input1').value);
+  });
+    document.getElementById('bW').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bW').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bW').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bX').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bX').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bX').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bY').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bY').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bY').value;
+        console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bZ').addEventListener('click', function(){
+        console.log(document.getElementById('input1').value);
+        document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bZ').value;
+        document.getElementById('inputname1').value = document.getElementById('inputname1').value + document.getElementById('bZ').value;
+        console.log(document.getElementById('input1').value);
+  });
   butt.onclick=function(){
     var link=$("#input1").val();
     link="http://"+link;
@@ -68,7 +277,20 @@ function function1(){
   document.getElementById("but3").appendChild(ele1);
   document.getElementById("but3").appendChild(ele2);
   document.getElementById("but3").appendChild(butt);
+  /* (c)2006 Stephen Chalmers
+ * 
+ * Appends a 'hasFocus' flag to all text/textarea form
+ * elements.
+ *
+ 
+Insert this script anywhere below the last form in the document.
 
+To read the current focus state of a specified element, use:
+
+if( document.forms.myForm.myElement.hasFocus )
+ ...
+
+***/
 
 }
 
@@ -83,6 +305,181 @@ function function2(){
   var butt=document.createElement("button");
   butt.setAttribute("id","submit2");
   butt.innerHTML="submit";
+  
+  document.getElementById('bWWW').addEventListener('click', function(){
+  
+          document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bWWW').value;
+          document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bWWW').value;
+      
+        //document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+      
+  });
+  document.getElementById('bCOM').addEventListener('click', function(){
+  
+          document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bCOM').value;
+          document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bCOM').value;
+      
+        //document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+       
+  });
+  document.getElementById('bA').addEventListener('click', function(){
+  
+          document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bA').value;
+          document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bA').value;
+      
+        //document.getElementById('input1').value = document.getElementById('input1').value + document.getElementById('bA').value;
+       
+  });
+  document.getElementById('bB').addEventListener('click', function(){
+        
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bB').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bB').value;
+        
+  });
+  document.getElementById('bC').addEventListener('click', function(){
+       
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bC').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bC').value;
+       
+  });
+  document.getElementById('bD').addEventListener('click', function(){
+       
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bD').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bD').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bE').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bE').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bE').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bF').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bF').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bF').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bG').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bG').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bG').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bH').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bH').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bH').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bI').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bI').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bI').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bJ').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bJ').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bJ').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bK').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bK').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bK').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bL').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bL').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bL').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bM').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bM').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bM').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bN').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bN').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bN').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bO').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bO').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bO').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bP').addEventListener('click', function(){
+       // console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bP').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bP').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bQ').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bQ').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bQ').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bR').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bR').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bR').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bS').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bS').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bS').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bT').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bT').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bT').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bU').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bU').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bU').value;
+        //console.log(document.getElementById('input1').value);
+  });
+   document.getElementById('bV').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bV').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bV').value;
+        //console.log(document.getElementById('input1').value);
+  });
+    document.getElementById('bW').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bW').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bW').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bX').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bX').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bX').value;
+        //console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bY').addEventListener('click', function(){
+       // console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bY').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bY').value;
+       // console.log(document.getElementById('input1').value);
+  });
+  document.getElementById('bZ').addEventListener('click', function(){
+        //console.log(document.getElementById('input1').value);
+        document.getElementById('input2').value = document.getElementById('input2').value + document.getElementById('bZ').value;
+        document.getElementById('inputname2').value = document.getElementById('inputname2').value + document.getElementById('bZ').value;
+       // console.log(document.getElementById('input1').value);
+  });
   butt.onclick=function(){
     var link=$("#input2").val();
     link="http://"+link;
@@ -115,3 +512,29 @@ function function2(){
 }
 </script>
 <script type="text/javascript" src="landing.js"></script>
+<script type='text/javascript' >
+/* (c)2006 Stephen Chalmers
+ * 
+ * Appends a 'hasFocus' flag to all text/textarea form
+ * elements.
+ *
+ 
+Insert this script anywhere below the last form in the document.
+
+To read the current focus state of a specified element, use:
+
+if( document.forms.myForm.myElement.hasFocus )
+ ...
+
+***/
+
+for(var i=0, df=document.forms, len=df.length; i<len; i++)
+ for(j=0, els=df[i].elements; j<els.length; j++)
+  if( /^text/.test( els[j].type ) )
+  {
+   els[j].hasFocus=false;
+   els[j].onfocus=function(){this.hasFocus=true;};
+   els[j].onblur =function(){this.hasFocus=false;};
+  }
+
+</script>
